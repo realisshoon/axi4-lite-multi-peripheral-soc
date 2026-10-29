@@ -1,0 +1,13 @@
+[RESOURCE_GATE] slot=/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/resource_locks/eda_0.lock pid=51488 command=/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/fixed_v4/simv
+Traceback (most recent call last):
+  File "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/scripts/resource_gate.py", line 14, in <module>
+    try:raise SystemExit(subprocess.call(args))
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib64/python3.11/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/fixed_v4/simv'

@@ -1,0 +1,266 @@
+[
+  {
+    "project": "axi_spi",
+    "file": "rtl/spi_master.v",
+    "sha256": "1d3374d2044bc7d52c24f847ade60a2c0b3782654a2fe83ed4eb529a8b76ce1d",
+    "git_blob_sha": "77837ba7467da8086b3aa6624ec8e752555c4f37",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [],
+    "note": "No same-named main source file; local baseline preserved separately.",
+    "module_comparison": {
+      "main_path": "hardware/ip/spi/spi_v1_0.v",
+      "module": "spi_master",
+      "exact_module_text_after_newline_normalization": false,
+      "same_after_removing_full_line_comments": true,
+      "note": "main combines spi_v1_0 and spi_master; spi_master also has four different comment lines. This is a text comparison, not a formal equivalence proof."
+    }
+  },
+  {
+    "project": "axi_spi",
+    "file": "rtl/spi_slave.sv",
+    "sha256": "0b308fd432b3d10122376040802a8e9f642f24b7cf5cd8fcf9851ce88285470a",
+    "git_blob_sha": "4d14ac98a35a55b295d024f5760151ff463d9f5d",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/model/spi_slave.sv",
+        "git_blob_sha": "b274180e2ef4b485b3b4b8ef308a84443cc2aa43",
+        "main_sha256": "febe1e550899e7ac7798017bc027ad36a434a4ebbc260724e6a3c83ad6780c4a",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "rtl/spi_v1_0.v",
+    "sha256": "d3a53ea18763a7611857cc9809fc9422da6356efef837fd699c1c8071da5d326",
+    "git_blob_sha": "664bb2fca5ec573526fc49757cf6329149f96713",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "hardware/ip/spi/spi_v1_0.v",
+        "git_blob_sha": "35bf342e91d4e161a2b07a799ef925acc49e69c4",
+        "main_sha256": "c66dc8ecc50327b9c991c6f7fceca2784a06b1fc671ecabc4a8b457402a5f051",
+        "same_except_line_endings_and_final_newlines": false
+      }
+    ],
+    "module_comparison": {
+      "main_path": "hardware/ip/spi/spi_v1_0.v",
+      "module": "spi_v1_0",
+      "exact_module_text_after_newline_normalization": true,
+      "same_after_removing_full_line_comments": true,
+      "note": "main combines spi_v1_0 and spi_master; spi_master also has four different comment lines. This is a text comparison, not a formal equivalence proof."
+    }
+  },
+  {
+    "project": "axi_spi",
+    "file": "rtl/spi_v1_0_S00_AXI.v",
+    "sha256": "8405e0b364a1373695bdb322c3b5591a245ef1f3ffb06da1eb9c5918298af856",
+    "git_blob_sha": "0b3a8bf8d23de4730da897739eac43e08ec16982",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "hardware/ip/spi/spi_v1_0_S00_AXI.v",
+        "git_blob_sha": "54279adf29ef64232c62729bf705befbc2118d05",
+        "main_sha256": "552c70fd41e68482d5466165d989cd26e84e8a74a5e6fb1e3d3ceaeef7273285",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/axi_lite_driver.sv",
+    "sha256": "cc7d43dd5460278a1e4c3a2f2d971cf18542c823a08a9a80cf77bb9e5d837650",
+    "git_blob_sha": "333b57de90947e4e7b3a0b68f7514ab1833c1138",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/axi_lite_driver.sv",
+        "git_blob_sha": "600a8374b58b3815a9c176815f8f236630f41e4d",
+        "main_sha256": "4a85b3926c7234c3eb3b3cd225be5a9c7cf62f8dc025fcf43632ec7a1e473ef6",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/axi_lite_if.sv",
+    "sha256": "9079167b741f859bcb6ec681bcb855cba48d68f20d6241e887d572afdbd3c7b9",
+    "git_blob_sha": "936f8abb7cb2867349c17d0cfd836fb149a9db97",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/axi_lite_if.sv",
+        "git_blob_sha": "ab410ab8ddeb79d5e3897946b85a20925327b8c5",
+        "main_sha256": "3a2a0de2c6f8a9df50b82b01cf7679d8c33a3e3dbc8e9a64bf3c8a153ff8ac22",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/axi_lite_monitor.sv",
+    "sha256": "caa9939973d12caa119e1979f25869abae0906d3e108857f5622feb1032cbeec",
+    "git_blob_sha": "9171d71c5f90ac12edc95c1880556c4da47af38c",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/axi_lite_monitor.sv",
+        "git_blob_sha": "ffab679db38dd222519f64e89d9ae2240043d42d",
+        "main_sha256": "5cd470ab3e7326af4757548c58dc1779b600500a4e9bd3c91a774ff26ee37e85",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/axi_lite_sequence.sv",
+    "sha256": "e61b2cfec9697745dbfb2056a5921f51e522270d8b83d7fec1c534393639c275",
+    "git_blob_sha": "ff2b914773327ace61ce4bfeb757b6ebb109ac65",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/axi_lite_sequence.sv",
+        "git_blob_sha": "3bfbe646665ee2b9f26e7c6dd8bcc86b13516ec5",
+        "main_sha256": "2ca6f7da627a31edf2c8540006ebe5dee34c6bf7ff7deb411775bd71d162a62b",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/axi_lite_transaction.sv",
+    "sha256": "7403021919cb38dda9e4b69e60a632eed914ae36285e3865c9429d4a417b273d",
+    "git_blob_sha": "526ef3ad1ce5b2bd2d03ee8e0664d1c491c9dd15",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/axi_lite_transaction.sv",
+        "git_blob_sha": "ce9784b9e71aa12ead0f46c92b870b24d6dce7e0",
+        "main_sha256": "1c9a5482e544ac6f58403871e2d55fc020f6c838c2287cb4cd50fcbc0f75b1e5",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/coverage.sv",
+    "sha256": "402a3df9268cab9e0aa262e8bbb03e7ef174dcc6a40e59552c2bf5ede13e57b7",
+    "git_blob_sha": "ba4edb786ba2547d46bbcd86dc519bc72d513b1c",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/coverage.sv",
+        "git_blob_sha": "912a783520d2e5b8d5ae73a2624ee7b9c66e3e90",
+        "main_sha256": "6d96e58c1c569f355326b40f5cca32659217c25eb7fbd25dfd45c6ce956d6e24",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/env.sv",
+    "sha256": "7bbd733d0fa1b60c4c38f2458b04f39674d78e894d30cf84fdfda844e71349e1",
+    "git_blob_sha": "0587ecf585b94ad5d62ce0d3461181d386ec4fc5",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/env.sv",
+        "git_blob_sha": "07ce233a6688cff1b25b5d70362b323d4f5cedb1",
+        "main_sha256": "6db9be6cb958bfb669a7ac786da49bebe609b9904d53d63d4f5480f38f88cd65",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/scoreboard.sv",
+    "sha256": "c359f90947f519e16fad2883c271ddd10e91cca573c475e23fee0ec191accced",
+    "git_blob_sha": "b11ab34dba7e94321e8d9007edc4e09a8500aeeb",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/scoreboard.sv",
+        "git_blob_sha": "54aec41bd416d6a4cca57a3332b17a426b869998",
+        "main_sha256": "528b8011d759ffdb183f2ebf46a5f2792ac54f5aa7487eae288312ddb42b532c",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/spi_axi_test.sv",
+    "sha256": "42c4721bcfd8275ab8750b4c9b992ff68f140b89360c455ea78b20a1fbe86f72",
+    "git_blob_sha": "8fd396a5799234194e852ceb2259d0fd52ea72fc",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/spi_axi_test.sv",
+        "git_blob_sha": "bc8da1638c8fe41f09bf5d110842a56ab4bb3050",
+        "main_sha256": "3ca5a7f10eae2d758674fce13bc74476d9843fa85f300cd8710d7277f713f243",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/spi_if.sv",
+    "sha256": "64efef66ecbdfbed8a722701420d1fb63ac7b6adedf4a3bfd58b0285c74820c7",
+    "git_blob_sha": "21d30977cd72d27f2af9eedbb15ed4460d8f7751",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/spi_if.sv",
+        "git_blob_sha": "b143ca410ad1b8fd9af8f66a18170092df60c8d1",
+        "main_sha256": "157a41c392a95f80a1146e9a172bdae2a7d5a1e424035f2c1d9fc82efb081f82",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/spi_monitor.sv",
+    "sha256": "e211ba7a4102a2a6816a3c9e61fdc6c43a2edca6149402e686f3779f4fa09b6a",
+    "git_blob_sha": "042baf7ee6674dd82695ebf2aa4700e5a02c4130",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/spi_monitor.sv",
+        "git_blob_sha": "b799754385c3f4cf9a11a2f7c26c9c42366be125",
+        "main_sha256": "b60eeb0d40e1735ee1ed4654da75fef377bbe91d62105de2481e87388cd74f30",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/tb_top.sv",
+    "sha256": "4e6b16640095836b59496798b7a72f57403b0525d21e1bc27d6b50b477c71e2a",
+    "git_blob_sha": "5bc96a1b8506ffc9468bed4ccb96c9fdba30cb78",
+    "main_identical_paths": [],
+    "status": "LOCAL_BASELINE_NOT_BYTE_IDENTICAL_TO_ANY_MAIN_BLOB",
+    "normalized_comparison": [
+      {
+        "main_path": "verification/spi_uvm/tb/tb_top.sv",
+        "git_blob_sha": "09403988993b53e88cc74ba903e634827b2b7ea3",
+        "main_sha256": "6aa2d82b65cdfa1600ff3c823e0afe4ed19ec74c854b9f79cbaef10cf250ce74",
+        "same_except_line_endings_and_final_newlines": true
+      }
+    ]
+  }
+]

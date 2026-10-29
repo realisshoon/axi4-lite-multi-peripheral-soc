@@ -1,0 +1,37 @@
+[
+  {
+    "project": "axi_spi",
+    "file": "rtl/spi_v1_0_S00_AXI.v",
+    "change": "modified",
+    "baseline_sha256": "8405e0b364a1373695bdb322c3b5591a245ef1f3ffb06da1eb9c5918298af856",
+    "followup_sha256": "a32606475d2691082f0dd9d534f15378a2853a97de59ab05f846ee69c52de0d9"
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/enhanced/enhanced_classes.sv",
+    "change": "added",
+    "baseline_sha256": null,
+    "followup_sha256": "a59281e036d1aadda55e4d651fede7656dad1b67acd68a6136f051f4a5ef3355"
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/enhanced/protocol_assertions.sv",
+    "change": "added",
+    "baseline_sha256": null,
+    "followup_sha256": "9af016d9fa5443b3c8c873a17a8dc8700e8df0d9eda9a77b90cb3f3d43e4d489"
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/enhanced/spi_pin_responder.sv",
+    "change": "added",
+    "baseline_sha256": null,
+    "followup_sha256": "fa042c8bfee20aa6446e1bcc0d8ab612d8fc8d04c0935abbd428e34972ec64dd"
+  },
+  {
+    "project": "axi_spi",
+    "file": "tb/enhanced/tb_top.sv",
+    "change": "added",
+    "baseline_sha256": null,
+    "followup_sha256": "6b64a2ee0e9a441eb81dff1a6ffbd716cc028b2297095c9641dfb658f118c6e8"
+  }
+]

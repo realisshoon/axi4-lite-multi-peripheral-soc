@@ -1,0 +1,11 @@
+run,seed,register_completions,spi_transfers,checks,errors,fatals,nonvacuous_sva,assert_failures,result,log
+final_v5_large_s11,11,1232,11,3856,0,0,5662,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s11/simulation.log
+final_v5_large_s12,12,1232,11,3856,0,0,5542,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s12/simulation.log
+final_v5_large_s13,13,1232,11,3856,0,0,5620,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s13/simulation.log
+final_v5_large_s14,14,1232,11,3856,0,0,5654,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s14/simulation.log
+final_v5_large_s15,15,1232,11,3856,0,0,5411,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s15/simulation.log
+final_v5_large_s16,16,1232,11,3856,0,0,5546,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s16/simulation.log
+final_v5_large_s17,17,1232,11,3856,0,0,5530,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s17/simulation.log
+final_v5_large_s18,18,1232,11,3856,0,0,5415,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s18/simulation.log
+final_v5_large_s19,19,1232,11,3856,0,0,5632,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s19/simulation.log
+final_v5_large_s20,20,1232,11,3856,0,0,5662,0,PASS,/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/final_v5_large_s20/simulation.log

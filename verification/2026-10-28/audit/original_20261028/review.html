@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UVM 후속 검증 Evidence 대조 및 PT 수정안</title>
+<style>body{font-family:system-ui,sans-serif;color:#192838;max-width:1200px;margin:40px auto;padding:0 24px;line-height:1.65}h1{font-size:28px}h2{margin-top:36px;font-size:21px}table{border-collapse:collapse;width:100%;font-size:14px;margin:16px 0}th,td{border:1px solid #d7dfe6;padding:10px;text-align:left;vertical-align:top}th{background:#eef3f7}a{color:#165ba8}code{font-size:13px;overflow-wrap:anywhere}.note{background:#f3f6fa;border-left:4px solid #4c6e91;padding:16px}small{color:#526273}@media print{body{max-width:none;margin:0}table{font-size:10px}h2{break-after:avoid}tr{break-inside:avoid}}</style>
+<h1>UVM 후속 검증 Evidence 대조 및 PT 수정안</h1>
+<p>검토일 2026-10-28 · 상태: <b>내용 수정안 / 디자인 미반영</b></p>
+<div class="note">로컬 후속 검증 코드·로그와 교육 당시 발표자료를 대조했다. GitHub URL·후속 Branch·Commit SHA·Evidence 경로 및 현재 20장 PT 링크가 입력되지 않아 <b>업로드된 특정 커밋과의 동일성, 현재 PT 페이지별 일치 여부와 수정 페이지 번호는 미확정</b>이다. 아래 항목은 내용 기준의 수정 후보이며 새 20장 구성이 아니다. 기존 순서·디자인을 유지하고 사용자 승인 후 반영한다.</div>
+
+<h2>1. 교육 당시 직접 수행한 검증과 후속 Codex 지원 검증</h2>
+<p>교육 당시 원본 검증은 사용자가 직접 수행한 활동으로 구분한다. 2026-10-19 enhancement의 자극·checker·RTL 수정 및 회귀 결과는 <b>“교육 이후 Codex 지원 후속 검증”</b>으로 별도 표기한다. 같은 날 보존 원본을 다시 실행한 baseline failure도 교육 당시 발생한 실패로 소급하지 않는다. CNN의 보존 결과는 enhancement의 신규 실행에 포함하지 않는다.</p>
+<table><tr><th>대상</th><th>교육 당시 보존 근거</th><th>후속 검증에서 확장한 범위</th></tr>
+<tr><td>SPI</td><td>spi_test 1개, 24 transfers / 양방향 48 checks PASS. Functional Coverage weighted 59.59%.</td><td>독립 MOSI/MISO pin decode, 특수·walking·random 패턴, divider 4/5/20/255, busy START, DATA/LOAD reset recovery. Terminal SCLK high 검사 및 RTL 수정.</td></tr>
+<tr><td>I2C</td><td>i2c_test 1개, target WRITE/READ 각 6 + wrong-address 각 1 = 14 transactions PASS, legacy FC 100%. 초기 12 PASS·85.71%의 실행 근거와 교육 당시 수정 연결은 미확정.</td><td>ACK wrapper 연결 수정, SDA/SCL 독립 decode, target/wrong/boundary 주소 분포, final NACK, timeout·drain·address reset recovery. 후속 결과를 교육 당시 해결 근거로 사용하지 않음.</td></tr>
+<tr><td>AXI4-Lite SPI</td><td>spi_axi_test 1개, SPI 16 transfers / 32 comparisons PASS, legacy 7/7 bins. 정상 순차 register/SPI 경로.</td><td>독립 AW/W 순서, WSTRB 16 masks, B/R stall, outstanding read, register/RO/side effect, reset 및 SPI reference. WSTRB·read capacity·DONE collector 보강.</td></tr>
+<tr><td>VGA</td><td>rg_detect_test의 500 frames PASS. 49-bin 결과와 별도 37-bin variant 구분.</td><td>NONE, threshold±1, 경계/단일 pixel/복수 object, 32-cycle stall, frame/stall reset, exhaustive RGB debug. RTL 버그 수정 사례가 아닌 checker·coverage 확장.</td></tr>
+<tr><td>CNN</td><td>기존 UVM/Golden 실행과 Python 비교 자료 보존. 각 실행 시기와 scope 별도 유지.</td><td>이번 enhancement 신규 실행 0회. 기존 45 invocations·26 classes·7 seeds 및 Frame ID 121의 29 OP 비교 결과 재사용.</td></tr></table>
+<p>근거: <a href="../../UVM_ENHANCEMENT_20261019/baseline/prior_audit/UVM_VERIFICATION_MATRIX.md">원본 검증 매트릭스</a>, <a href="../../20260613_spi_uvm/out/log/sim.log">교육 SPI 로그</a>, <a href="../../20260616_i2c_uvm/out/log/sim.log">교육 I2C 로그</a>.</p>
+
+<h2>2. Scenario·Test Case·Seed·Transaction 집계</h2>
+<p><b>Scenario family, UVM test class, 실행 횟수, seed, transaction, checker evaluation은 서로 다른 단위다.</b> 아래 Scenario 숫자는 후속 소스의 분류이며 원본 대비 순증 독립 Test Case 수가 아니다. 기존에도 존재한 random·directed가 포함되어 있어 단순 합산하여 “신규 Scenario 41개” 등으로 쓰지 않는다.</p>
+<table><tr><th>대상</th><th>후속 Scenario / 사용 Test class</th><th>전체 정상 실행 / 고유 seeds</th><th>완료·검사 수</th></tr>
+<tr><td>SPI</td><td>4 families: random/busy, directed, DATA reset, LOAD reset. 기존 spi_test 1개 사용.</td><td>16회 / 16개<br>10,11,12,22,55,66,101–110</td><td>11,193 transfers<br>22,386 checks PASS</td></tr>
+<tr><td>I2C</td><td>3 families: mixed-address random, directed/wrong-address, address reset. 기존 i2c_test 1개 사용.</td><td>15회 / 15개<br>5,10,11,12,22,101–110</td><td>11,140 transactions<br>26,038 checks PASS</td></tr>
+<tr><td>AXI4-Lite SPI</td><td>10 families: defaults, byte-write/RO, side effects, AW/W, B/R stall, outstanding read, reset, SPI E2E, busy START, stress. enhanced_test 1개.</td><td>15회 / 13개<br>1,3,4,11–20</td><td>14,097 register ops<br>44,290 checker evaluations PASS<br>SPI 완료 135회 별도</td></tr>
+<tr><td>VGA frame</td><td>Scenario IDs 0–23. 22·23은 같은 default random 분기. enhanced_test 1개.</td><td>13회 / 13개<br>301–303,401–410</td><td>1,275 attempts = 1,169 checked PASS + 106 intentional reset abort</td></tr>
+<tr><td>VGA debug</td><td>debug_color_test 1개. 4,096 RGB × 8 switch + DE-off 8 vectors.</td><td>1회 / seed 501</td><td>32,776 vectors PASS<br>frame 수와 합산하지 않음</td></tr>
+<tr><td>Basic Adder</td><td>4 CASE modes: smoke/directed/random/exhaustive. add_test 1개.</td><td>14회 / 10개<br>1,11,21,31,41,51,61,71,81,91</td><td>76,952 checks PASS<br>65,536 exhaustive pairs 포함</td></tr>
+<tr><td>Basic RAM</td><td>4 CASE modes: smoke/directed/random/legacy50. mem_test 1개.</td><td>14회 / 같은 10개 seeds</td><td>19,395 ops/checks PASS<br>write 9,652 + read 9,743</td></tr>
+<tr><td>Clock RAM</td><td>3 CASE modes: smoke/directed/random. mem_test 1개.</td><td>13회 / 같은 10개 seeds</td><td>19,295 ops/checks PASS</td></tr>
+<tr><td>Clock Adder / CNN</td><td>Clock Adder: DUT source 누락. CNN: 기존 결과 재사용.</td><td>신규 실행 각각 0회</td><td>신규 PASS 수치 없음</td></tr></table>
+<p>101개 정상 실행 raw log의 summary를 이번 검토에서 다시 파싱해 manifest와 비교했고, 전부 일치했다. 원본/패키지 로그 byte도 101개 모두 일치했으며 UVM_ERROR/FATAL 요약은 모두 0이다. 정상 실행 집합 밖의 의도적 checker failure, 개발 중 폐기된 실행, 실제 미해결 진단 실패는 별도다. 이 검토는 시뮬레이션 재실행이 아니다.</p>
+<p><a href="verified_runs.csv">실행별 검수 CSV</a> · <a href="audit.json">재집계 결과·원본 경로·행·SHA-256</a> · <a href="../../UVM_ENHANCEMENT_20261019/UVM_PORTFOLIO_PACKAGE/manifests/SCENARIO_CATALOG.json">Scenario 분류</a></p>
+<table><tr><th>발표 본문에 사용할 대표 회귀</th><th>실행 범위</th><th>정확한 결과 문구</th></tr>
+<tr><td>SPI</td><td>seeds 101–110, 10회</td><td>10,000 transfers / 20,000 comparisons PASS</td></tr>
+<tr><td>I2C</td><td>seeds 101–110, 10회</td><td>10,000 transactions / 23,378 checks PASS</td></tr>
+<tr><td>AXI</td><td>fixed_v5, seeds 11–20, 10회</td><td>12,320 register ops / 38,560 checker evaluations PASS; SPI 110회 별도</td></tr>
+<tr><td>VGA</td><td>seeds 401–410, 10회</td><td>1,200 attempts = 1,100 checked PASS + 100 reset abort</td></tr></table>
+<p>대표 회귀는 전체 정상 실행의 부분집합이다. 둘을 더하지 않는다. 후속 실행량 자체가 추가 Evidence이며, 서로 다른 checker와 단위의 교육 당시 수치를 빼서 “검증 성능 증가율”을 계산하지 않는다. SPI/I2C pin procedural check 횟수는 SVA 횟수로 바꾸지 않는다.</p>
+
+<h2>3. Functional / Code Coverage의 범위</h2>
+<p>아래 값은 정상 회귀 및 targeted 실행을 합친 <b>최종 merge</b> 기준이다. 대표 10-seed 실행만의 Coverage라고 표기하지 않는다.</p>
+<table><tr><th>대상</th><th>Functional Coverage</th><th>DUT Code Coverage: Line / Condition / Branch / FSM / Toggle (%)</th></tr>
+<tr><td>SPI</td><td>legacy weighted 80.00%; raw 65/67 = 97.01%<br>enhanced 20/20<br>두 group raw 합 85/87 = 97.70%</td><td>100 / 100 / 100 / 100 / 97.98<br>133/133 · 25/25 · 29/29 · 6/6 · 582/594</td></tr>
+<tr><td>I2C</td><td>legacy 25/25; enhanced 18/19 = 94.74%<br>두 group raw 합 43/44 = 97.73%<br>ACK-continuation bin 미도달</td><td>97.98 / 97.62 / 90.91 / 58.14 / 97.12<br>243/248 · 41/42 · 70/77 · 25/43 · 540/556</td></tr>
+<tr><td>AXI</td><td>legacy 7/7 + protocol 36/36 = 43/43<br>실제 SR 주소의 DONE만 sample하는 fixed_v5</td><td>100 / 87.04 / 97.96 / 83.33 / 80.40<br>153/153 · 47/54 · 48/49 · 5/6 · 1042/1296</td></tr>
+<tr><td>VGA</td><td>extended 43/43 + debug 32/32<br>기존 49-bin group과 별도 목적</td><td>100 / 96.36 / 95.35 / N/A / 95.56<br>111/111 · 53/55 · 41/43 · 0 targets · 946/990</td></tr>
+<tr><td>Basic</td><td>Adder 538/538; RAM 774/774; Clock RAM new 774/774 + legacy 29/29</td><td>Adder: Toggle 50/50, 나머지 N/A<br>RAM: Line 3/3, Branch 2/2, Toggle 52/54<br>Clock RAM: Line 3/3, Branch 2/2, Toggle 52/52</td></tr>
+<tr><td>CNN 기존</td><td>Golden intent 58/58; common 포함 65/70 = 92.86%<br>별도 integration v3 249/257 = 96.89%</td><td>Golden: 80.15 / 62.99 / 74.47 / 41.74 / 65.64<br>integration v3: 85.37 / 73.88 / 82.54 / 86.24 / 69.73<br>서로 다른 scope; enhancement 신규 측정 아님</td></tr></table>
+<p>Native report 확인: <a href="../../UVM_ENHANCEMENT_20261019/projects/spi/coverage/closed_final/report/groups.txt">SPI groups</a> / <a href="../../UVM_ENHANCEMENT_20261019/projects/spi/coverage/closed_final/report/hierarchy.txt">hierarchy</a>, <a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/coverage/distributed/report/groups.txt">I2C groups</a> / <a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/coverage/distributed/report/hierarchy.txt">hierarchy</a>, <a href="../../UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/groups.txt">AXI groups</a> / <a href="../../UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/hierarchy.txt">hierarchy</a>, <a href="../../UVM_ENHANCEMENT_20261019/projects/vga/coverage/enhanced_final/groups.txt">VGA groups</a> / <a href="../../UVM_ENHANCEMENT_20261019/projects/vga/coverage/enhanced_final/hierarchy.txt">hierarchy</a>. Basic/CNN은 <a href="../../UVM_ENHANCEMENT_20261019/UVM_PORTFOLIO_PACKAGE/reports/COVERAGE_COMPARISON.md">보존 Coverage 비교 보고서</a>와 <a href="../../UVM_ENHANCEMENT_20261019/PPT_FINAL_SELECTION/VERIFICATION_FINAL_RESULTS.md">10/20 검수 보고서</a>의 수치이며 이번 raw 101-run 재집계와 구분한다.</p>
+<p>SPI weighted 59.59→80.00%와 raw 65/67을 혼용하지 않는다. AXI DUT SCORE 70.76→89.75%는 RTL 수정으로 분모가 바뀐 비교다. VGA DUT SCORE 75.92→96.82%는 동일 RTL 범위의 비교이나 예전 Code report를 특정 500-frame 로그와 동일 실행으로 단정하지 않는다. Top-level SCORE(AXI 91.46%, VGA 97.45%)에는 assertion 항목이 포함되므로 DUT SCORE와 바꾸어 쓰지 않는다. Native report가 없는 교육 당시 SPI/I2C Code Coverage는 0%가 아니라 미확인이다.</p>
+<p>남은 범위: SPI divider 0–3 진단은 8 checks 중 3 FAIL로 OPEN. I2C continuation·multi-byte·repeated START·stretching/arbitration·전용 duration timing 미검증. AXI ready-preasserted 조합·LOAD reset 및 code holes 잔존. VGA condition 2, branch 2, toggle 44 미도달. CNN은 실제 DDR board/PHY 및 모든 모델 검증으로 확대 해석하지 않는다.</p>
+
+<h2>4. I2C ACK 판정과 기존 발표의 정합성</h2>
+<p><b>판정: 로컬 후속 검증의 ACK wrapper 배선 수정 및 정상 실행 근거 확보. 교육 당시 ACK sampling 수정 완료의 인과관계는 별도 미확정.</b></p>
+<table><tr><th>근거 단계</th><th>확인 내용</th></tr>
+<tr><td>수정 전 소스</td><td><a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/baseline_source/rtl/i2c_master_slave_top.sv">원본 wrapper</a>의 master 포트가 <code>.ack_in(master_read_ack), .ack_out(slave_ack_received)</code>로 연결되어 있다.</td></tr>
+<tr><td>수정 후 소스</td><td><a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/rtl/i2c_master_slave_top.sv">후속 wrapper</a>는 <code>.ack_in(ack_in), .ack_out(ack_out)</code>. 현재 RTL/TB 16개 파일 모두 distributed build source_manifest의 SHA-256과 일치한다.</td></tr>
+<tr><td>실패 재현</td><td><a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/runs/baseline_failure_s1_n14/sim.log">2026-10-19 seed 1 로그</a>에 ACK unknown UVM_ERROR 12건. 교육 당시 12 PASS·WARNING 단계와 같은 로그가 아니다.</td></tr>
+<tr><td>수정 후 실행</td><td><a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/runs/distributed_directed_s10_n24/sim.log">seed 10 directed 로그</a>: issued/completed 24, checks/pass 48, fail 0, E/F 0. <a href="../../UVM_ENHANCEMENT_20261019/projects/i2c/runs/distributed_directed_s10_n24/metadata.json">metadata</a>가 distributed build hash를 참조한다. 전체 15회 26,038 checks PASS도 재집계했다.</td></tr>
+<tr><td>표현 제한</td><td>Before seed 1 / After seed 10은 동일 seed A/B 실험이 아니다. 배선·monitor·stimulus가 함께 바뀌었다. ACK 관련 전체 기능 해결, 교육 당시 해당 수정을 직접 완료했다는 증거로 확장하지 않는다.</td></tr></table>
+<p>권장 문구: <b>“교육 이후 Codex 지원 검증에서 ACK wrapper 연결을 수정하고, 수정 소스와 연결된 회귀 로그에서 정상 동작을 확인했다. Single-byte 종료는 final NACK 기준이며 ACK continuation은 미검증이다.”</b></p>
+<table><tr><th>기존 자료의 주장</th><th>대조 결과</th><th>수정 방향</th></tr>
+<tr><td>SPI PASS 48 / FC 59.59%</td><td>교육 원본 로그와 일치.</td><td>교육 당시 결과로 유지하고 후속 10-seed 결과를 별도 추가.</td></tr>
+<tr><td>I2C 초기 PASS 12 / FC 85.71% → 14 / 100%, ACK sampling 해결</td><td>최종 14 / 100% 로그는 존재. 초기 실행과 수정 인과관계는 미확정. 보존 현재 소스와 과거 성공 로그도 불일치.</td><td>과거 결과와 후속 wrapper 수정의 근거를 분리. 교육 당시 해결 완료 문구는 보류.</td></tr>
+<tr><td>I2C waveform의 Repeated START</td><td>후속 testplan은 START/STOP 단위 single-byte이며 repeated START를 검증 범위에서 제외.</td><td>현재 소스·로그로 입증된 범위로 캡션 제한. 과거 파형에 실제 repeated START가 있는지는 별도 확인.</td></tr>
+<tr><td>ACK sampling 원인 설명</td><td>교육 발표자료는 Monitor를, 현재 GitHub README는 Driver를 지목한다. 후속 소스에서는 wrapper 연결 문제가 확인된다.</td><td>원인 세 설명을 동일 사건처럼 통합하지 않음. 각 버전의 코드·로그에 맞춰 서술.</td></tr>
+<tr><td>AXI FC 100%, 32 PASS, DUT 70.76 / Master 86.94 / Bus 100%</td><td>32 PASS·legacy 7/7은 과거 범위. “SPI Bus”의 정확한 hierarchy 명칭은 미확정.</td><td>후속 fixed_v5 43/43 및 DUT scope를 명시하고 Bus 100% 포괄 표현 보류.</td></tr>
+<tr><td>로컬 PPT_CONTENT의 후속 대표 수치</td><td>SPI/I2C/AXI/VGA 수치가 이번 raw-log 재집계와 일치.</td><td>현재 20장 PT에 실제 들어간 값은 아직 미확인. “Team Result”를 개인 직접 수행 성과로 옮기지 않음.</td></tr></table>
+<p>실제로 읽은 발표 원문: <a href="https://docs.google.com/presentation/d/1WpOPTe-d4dTYRqCZQHGW1HRBCRkT0JC2ZbrDeSwRrf4/edit">교육 SPI/I2C 발표자료</a>, <a href="https://docs.google.com/presentation/d/1AvoUjXnc2KhWLqZDYGISRJFZZ23afADnB7vVu_P6gtw/edit">AXI Peripheral 발표자료 사본</a>. <a href="https://github.com/realisshoon/spi_i2c_uvm/blob/main/README.md">SPI/I2C main README</a>도 확인했으나 사용자가 지정하려는 후속 브랜치로 확정한 것은 아니다.</p>
+
+<h2>5. 기존 20장 PT에서 보완할 내용 후보</h2>
+<p>아래는 <b>기존 해당 내용이 있는 슬라이드만</b> 수정하는 안이다. 한 페이지에 여러 항목이 있으면 함께 반영하고, 기존에 없는 프로젝트를 새로 추가하지 않는다. 현재 PT를 받아야 최종 수정 페이지 수·번호·문장 위치를 확정할 수 있다.</p>
+<table><tr><th>기존 슬라이드 내용</th><th>기존 표현 / 확인 상태</th><th>보완안</th><th>최소 변경</th></tr>
+<tr><td>검증 방법·개인 역할</td><td>교육 검증과 후속 지원 결과가 섞일 가능성; 현재 PT 미확인</td><td>“교육 당시 직접 수행” / “2026-10-19 Codex 지원 후속 검증”을 각 결과에 표기.</td><td>기존 역할 문장·결과 라벨 보완</td></tr>
+<tr><td>SPI 결과</td><td>교육 발표: 48 PASS, FC 59.59%</td><td>교육 수치 유지. 후속: 10 seeds, 10,000 transfers, 20,000 checks PASS. FC legacy weighted 80%, enhanced 20/20. divider 0–3 OPEN 각주.</td><td>결과 카드와 캡션 교체</td></tr>
+<tr><td>I2C 결과·ACK troubleshooting</td><td>교육 발표: 12→14 PASS, 85.71→100%, sampling 해결</td><td>교육 최종 14 PASS는 과거 로그로 구분. 후속 wrapper diff + seed별 Before/After 로그, 10,000 transactions / 23,378 checks, enhanced 18/19. 교육 당시 해결 인과관계 미확정 표시.</td><td>문제–원인–수정–검증 문구와 증거 교체</td></tr>
+<tr><td>AXI 검증 결과·debug</td><td>교육 발표: 32 PASS / FC 100%</td><td>후속 fixed_v5: 12,320 register ops / 38,560 checker evaluations, 43/43 bins. WSTRB/read capacity 수정 근거. Targeted After 파형은 fixed_v3, 최종 Coverage는 v5로 구분.</td><td>결과 표·파형 캡션 보완</td></tr>
+<tr><td>VGA 검증 결과</td><td>보존 원본: 500 frames PASS; 현재 PT 문구 미확인</td><td>후속 1,100 checked PASS + 100 reset abort, 별도 32,776 debug vectors. “RTL 유지, NONE·경계·stall/reset checker 확장.”</td><td>결과 단위와 검증 범위 보완</td></tr>
+<tr><td>CNN 검증 결과</td><td>기존 결과 재사용; 현재 PT 문구 미확인</td><td>“enhancement 신규 실행 없음.” Frame ID 121의 29/29 OP·5,174,016 elements는 Python bit-exact 비교로 명시. Golden과 integration v3 분리.</td><td>수치 출처·범위 각주 보완</td></tr>
+<tr><td>검증 종합·결론</td><td>전체 PASS/100% 또는 신규 검증 성과로 합쳐져 있을 경우</td><td>프로젝트별 단위·잔여 scope 유지. 후속 결과를 개인 교육 수행 성과와 구분. 실패 진단과 미검증 범위 표시.</td><td>요약 수치·기여 문장 수정</td></tr></table>
+<p>표지·목차·프로젝트 배경·회로 구조·교육 당시 보드 실측 페이지는 새 Evidence 때문에 바꿀 대상으로 선정하지 않는다. 다만 후속 수치를 인용한 문구가 이미 있다면 해당 문장만 검토한다. Basic 검증은 기존 20장에 해당 내용이 있을 때만 보완한다. 새로운 페이지 추가·순서 변경·디자인 변경은 이 수정안에 포함하지 않는다.</p>
+<p><b>다음 확정에 필요한 자료:</b> GitHub URL, Branch, Commit SHA, 검증 Evidence 경로, 현재 20장 PT 링크 또는 파일. 제공 후 커밋 기준 대조와 정확한 페이지별 기존→수정 문구를 완성해 승인을 요청한다. 사용자의 사전 승인 요청에 따라 미리캔버스 디자인에는 아직 아무 변경도 하지 않았다.</p>
+</html>

@@ -1,0 +1,1587 @@
+===============================================================================
+Module : uvm_pkg
+===============================================================================
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+ 33.33  --     --      --     --      --     --      --     --      --     --       33.33 1/3 
+
+Source File(s) : 
+
+/tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/uvm_pkg.sv
+
+Module self-instances :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT      NAME    
+ 33.33  --     --      --     --      --     --      --     --      --     --       33.33 1/3  uvm_pkg 
+
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uvm_pkg
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       3     1         33.33   1                 33.33   
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            3     1         33.33   1                 33.33   
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name                                                  Attempts Real Successes Failures Incomplete 
+\uvm_component_name_check_visitor::visit .unnamed$$_0 510      510            0        0          
+\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1        0        0              0        0          
+\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1       0        0              0        0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uvm_pkg
+===============================================================================
+
+Instance :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+ 33.33  --     --      --     --      --     --      --     --      --     --       33.33 1/3 
+
+
+Instance's subtree :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+ 33.33  --     --      --     --      --     --      --     --      --     --       33.33 1/3 
+
+
+Module : 
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT      NAME    
+ 33.33  --     --      --     --      --     --      --     --      --     --       33.33 1/3  uvm_pkg 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : spi_v1_0
+===============================================================================
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT        
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --     
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/rtl/spi_v1_0.v
+
+Module self-instances :
+
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT         NAME       
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --      tb_top.dut 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : spi_v1_0
+                Total Covered Percent 
+Totals          31    24      77.42   
+Total Bits      258   228     88.37   
+Total Bits 0->1 129   114     88.37   
+Total Bits 1->0 129   114     88.37   
+
+                              
+Ports          25  19  76.00  
+Port Bits      204 176 86.27  
+Port Bits 0->1 102 88  86.27  
+Port Bits 1->0 102 88  86.27  
+
+                              
+Signals          6  5  83.33  
+Signal Bits      54 52 96.30  
+Signal Bits 0->1 27 26 96.30  
+Signal Bits 1->0 27 26 96.30  
+
+Port Details
+                    Toggle Toggle 1->0 Toggle 0->1 Direction 
+spi_sclk            Yes    Yes         Yes         OUTPUT    
+spi_mosi            Yes    Yes         Yes         OUTPUT    
+spi_miso            Yes    Yes         Yes         INPUT     
+spi_cs_n            Yes    Yes         Yes         OUTPUT    
+s00_axi_aclk        Yes    Yes         Yes         INPUT     
+s00_axi_aresetn     Yes    Yes         Yes         INPUT     
+s00_axi_awaddr[1:0] No     No          No          INPUT     
+s00_axi_awaddr[3:2] Yes    Yes         Yes         INPUT     
+s00_axi_awprot[2:0] No     No          No          INPUT     
+s00_axi_awvalid     Yes    Yes         Yes         INPUT     
+s00_axi_awready     Yes    Yes         Yes         OUTPUT    
+s00_axi_wdata[31:0] Yes    Yes         Yes         INPUT     
+s00_axi_wstrb[3:0]  Yes    Yes         Yes         INPUT     
+s00_axi_wvalid      Yes    Yes         Yes         INPUT     
+s00_axi_wready      Yes    Yes         Yes         OUTPUT    
+s00_axi_bresp[1:0]  No     No          No          OUTPUT    
+s00_axi_bvalid      Yes    Yes         Yes         OUTPUT    
+s00_axi_bready      Yes    Yes         Yes         INPUT     
+s00_axi_araddr[1:0] No     No          No          INPUT     
+s00_axi_araddr[3:2] Yes    Yes         Yes         INPUT     
+s00_axi_arprot[2:0] No     No          No          INPUT     
+s00_axi_arvalid     Yes    Yes         Yes         INPUT     
+s00_axi_arready     Yes    Yes         Yes         OUTPUT    
+s00_axi_rdata[31:0] Yes    Yes         Yes         OUTPUT    
+s00_axi_rresp[1:0]  No     No          No          OUTPUT    
+s00_axi_rvalid      Yes    Yes         Yes         OUTPUT    
+s00_axi_rready      Yes    Yes         Yes         INPUT     
+
+Signal Details
+                 Toggle Toggle 1->0 Toggle 0->1 
+spi_start_pulse  Yes    Yes         Yes         
+spi_tx_data[7:0] Yes    Yes         Yes         
+spi_clk_div[6:0] Yes    Yes         Yes         
+spi_clk_div[7]   No     No          No          
+spi_busy         Yes    Yes         Yes         
+spi_done         Yes    Yes         Yes         
+spi_rx_data[7:0] Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.dut
+===============================================================================
+
+Instance :
+
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT        
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --     
+
+
+Instance's subtree :
+
+SCORE   LINE            COND          TOGGLE            FSM         BRANCH        ASSERT        
+ 89.75  100.00 153/153   87.04 47/54   80.40 1042/1296   83.33 5/6   97.96 48/49  --     --     
+
+
+Module : 
+
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT         NAME     
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --      spi_v1_0 
+
+
+Parent : 
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT         NAME   
+--      --     --      --     --      --     --      --     --      --     --      --     --      tb_top 
+
+
+Subtrees :
+
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT         NAME                  
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --      spi_v1_0_S00_AXI_inst 
+ 94.13  100.00 77/77  100.00 6/6     87.31 234/268   83.33 5/6     100.00 14/14  --     --      u_spi_master          
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : spi_v1_0_S00_AXI
+===============================================================================
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT        
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --     
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/rtl/spi_v1_0_S00_AXI.v
+
+Module self-instances :
+
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT         NAME                             
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --      tb_top.dut.spi_v1_0_S00_AXI_inst 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : spi_v1_0_S00_AXI
+
+             Line No.   Total   Covered  Percent
+TOTAL                       76       76   100.00
+ALWAYS            144        2        2   100.00
+ALWAYS            149       22       22   100.00
+ALWAYS            177       27       27   100.00
+ALWAYS            243        7        7   100.00
+ALWAYS            267        8        8   100.00
+ALWAYS            287        6        6   100.00
+ALWAYS            318        4        4   100.00
+
+143                         always @(*) begin
+144        1/1                  axi_awready = !aw_pending && !axi_bvalid;
+145        1/1                  axi_wready = !w_pending && !axi_bvalid;
+146                         end
+147                         assign slv_reg_wren = aw_pending && w_pending && !axi_bvalid;
+148                         always @(posedge S_AXI_ACLK) begin
+149        1/1                  if (!S_AXI_ARESETN) begin
+150        1/1                      aw_pending <= 0;
+151        1/1                      w_pending <= 0;
+152        1/1                      axi_awaddr <= 0;
+153        1/1                      write_data <= 0;
+154        1/1                      write_strobe <= 0;
+155        1/1                      axi_bvalid <= 0;
+156        1/1                      axi_bresp <= 0;
+157                             end else begin
+158        1/1                      if (S_AXI_AWVALID && axi_awready) begin
+159        1/1                          axi_awaddr <= S_AXI_AWADDR;
+160        1/1                          aw_pending <= 1;
+161                                 end
+                        MISSING_ELSE
+162        1/1                      if (S_AXI_WVALID && axi_wready) begin
+163        1/1                          write_data <= S_AXI_WDATA;
+164        1/1                          write_strobe <= S_AXI_WSTRB;
+165        1/1                          w_pending <= 1;
+166                                 end
+                        MISSING_ELSE
+167        1/1                      if (slv_reg_wren) begin
+168        1/1                          aw_pending <= 0;
+169        1/1                          w_pending <= 0;
+170        1/1                          axi_bvalid <= 1;
+171        1/1                          axi_bresp <= 0;
+172        2/2                      end else if (axi_bvalid && S_AXI_BREADY) axi_bvalid <= 0;
+                        MISSING_ELSE
+173                             end
+174                         end
+175                     
+176                         always @(posedge S_AXI_ACLK) begin
+177        1/1                  if (S_AXI_ARESETN == 1'b0) begin
+178        1/1                      slv_reg0 <= 32'h0000_6400;  // clk_div = 100
+179        1/1                      slv_reg1 <= 0;
+180        1/1                      slv_reg2 <= 0;
+181        1/1                      slv_reg3 <= 0;
+182                     
+183        1/1                      start_pulse_r <= 1'b0;
+184        1/1                      done_sticky <= 1'b0;
+185        1/1                      rx_data_reg <= 8'd0;
+186                             end else begin
+187        1/1                      start_pulse_r <= 1'b0;
+188                     
+189        1/1                      if (spi_done) begin
+190        1/1                          done_sticky <= 1'b1;
+191        1/1                          rx_data_reg <= spi_rx_data;
+192                                 end
+                        MISSING_ELSE
+193        1/1                      if (slv_reg_wren) begin
+194        1/1                          case (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+195                                         2'h0: begin
+196                                             // CR register
+197        1/1                                  for (byte_index=0; byte_index<C_S_AXI_DATA_WIDTH/8; byte_index=byte_index+1)
+198        2/2                                      if (write_strobe[byte_index]) slv_reg0[byte_index*8+:8] <= write_data[byte_index*8+:8];
+                        MISSING_ELSE
+199                     
+200                                             // CR[0] = START
+201        1/1                                  if (write_strobe[0] && write_data[0]) begin
+202        1/1                                      start_pulse_r <= 1'b1;
+203        1/1                                      done_sticky   <= 1'b0;
+204                                             end
+                        MISSING_ELSE
+205                     
+206                                             // CR[1] = CLR_STATUS
+207        1/1                                  if (write_strobe[0] && write_data[1]) begin
+208        1/1                                      done_sticky <= 1'b0;
+209                                             end
+                        MISSING_ELSE
+210                                         end
+211                     
+212                                         2'h1: begin
+213                                             // TXDATA register
+214        1/1                                  for (byte_index=0; byte_index<C_S_AXI_DATA_WIDTH/8; byte_index=byte_index+1)
+215        2/2                                      if (write_strobe[byte_index]) slv_reg1[byte_index*8+:8] <= write_data[byte_index*8+:8];
+                        MISSING_ELSE
+216                                         end
+217                     
+218                                         2'h2: begin
+219                                             // RXDATA is read-only
+220        1/1                                  slv_reg2 <= slv_reg2;
+221                                         end
+222                     
+223                                         2'h3: begin
+224                                             // SR is read-only
+225        1/1                                  slv_reg3 <= slv_reg3;
+226                                         end
+227                     
+228                                         default: begin
+229                                         end
+230                                     endcase
+231                                 end
+                        MISSING_ELSE
+232                             end
+233                         end
+234                     
+235                         // Implement axi_arready generation
+236                         // axi_arready is asserted for one S_AXI_ACLK clock cycle when
+237                         // S_AXI_ARVALID is asserted. axi_awready is 
+238                         // de-asserted when reset (active low) is asserted. 
+239                         // The read address is also latched when S_AXI_ARVALID is 
+240                         // asserted. axi_araddr is reset to zero on reset assertion.
+241                     
+242                         always @(posedge S_AXI_ACLK) begin
+243        1/1                  if (S_AXI_ARESETN == 1'b0) begin
+244        1/1                      axi_arready <= 1'b0;
+245        1/1                      axi_araddr  <= 32'b0;
+246                             end else begin
+247        1/1                      if (~axi_arready && S_AXI_ARVALID && ~axi_rvalid) begin
+248                                     // indicates that the slave has acceped the valid read address
+249        1/1                          axi_arready <= 1'b1;
+250                                     // Read address latching
+251        1/1                          axi_araddr  <= S_AXI_ARADDR;
+252                                 end else begin
+253        1/1                          axi_arready <= 1'b0;
+254                                 end
+255                             end
+256                         end
+257                     
+258                         // Implement axi_arvalid generation
+259                         // axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both 
+260                         // S_AXI_ARVALID and axi_arready are asserted. The slave registers 
+261                         // data are available on the axi_rdata bus at this instance. The 
+262                         // assertion of axi_rvalid marks the validity of read data on the 
+263                         // bus and axi_rresp indicates the status of read transaction.axi_rvalid 
+264                         // is deasserted on reset (active low). axi_rresp and axi_rdata are 
+265                         // cleared to zero on reset (active low).  
+266                         always @(posedge S_AXI_ACLK) begin
+267        1/1                  if (S_AXI_ARESETN == 1'b0) begin
+268        1/1                      axi_rvalid <= 0;
+269        1/1                      axi_rresp  <= 0;
+270                             end else begin
+271        1/1                      if (axi_arready && S_AXI_ARVALID && ~axi_rvalid) begin
+272                                     // Valid read data is available at the read data bus
+273        1/1                          axi_rvalid <= 1'b1;
+274        1/1                          axi_rresp  <= 2'b0;  // 'OKAY' response
+275        1/1                      end else if (axi_rvalid && S_AXI_RREADY) begin
+276                                     // Read data is accepted by the master
+277        1/1                          axi_rvalid <= 1'b0;
+278                                 end
+                        MISSING_ELSE
+279                             end
+280                         end
+281                     
+282                         // Implement memory mapped register select and read logic generation
+283                         // Slave register read enable is asserted when valid address is available
+284                         // and the slave is ready to accept the read address.
+285                         assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
+286                         always @(*) begin
+287        1/1                  case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+288                                 2'h0: begin
+289                                     // CR
+290        1/1                          reg_data_out = slv_reg0;
+291                                 end
+292                     
+293                                 2'h1: begin
+294                                     // TXDATA
+295        1/1                          reg_data_out = slv_reg1;
+296                                 end
+297                     
+298                                 2'h2: begin
+299                                     // RXDATA
+300        1/1                          reg_data_out = {24'd0, rx_data_reg};
+301                                 end
+302                     
+303                                 2'h3: begin
+304                                     // SR
+305                                     // bit0 = busy
+306                                     // bit1 = done
+307        1/1                          reg_data_out = {30'd0, done_sticky, spi_busy};
+308                                 end
+309                     
+310                                 default: begin
+311        1/1                          reg_data_out = 32'd0;
+312                                 end
+313                             endcase
+314                         end
+315                     
+316                         // Output register or memory read data
+317                         always @(posedge S_AXI_ACLK) begin
+318        1/1                  if (S_AXI_ARESETN == 1'b0) begin
+319        1/1                      axi_rdata <= 0;
+320                             end else begin
+321                                 // When there is a valid read address (S_AXI_ARVALID) with 
+322                                 // acceptance of read address by the slave (axi_arready), 
+323                                 // output the read dada 
+324        1/1                      if (slv_reg_rden) begin
+325        1/1                          axi_rdata <= reg_data_out;  // register read data
+326                                 end
+                        MISSING_ELSE
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : spi_v1_0_S00_AXI
+
+               Total   Covered  Percent
+Conditions         48       41    85.42
+Logical            48       41    85.42
+Non-Logical         0        0
+Event               0        0
+
+ LINE       144
+ EXPRESSION (((!aw_pending)) && ((!axi_bvalid)))
+             -------1-------    -------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       145
+ EXPRESSION (((!w_pending)) && ((!axi_bvalid)))
+             -------1------    -------2-------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       158
+ EXPRESSION (S_AXI_AWVALID && axi_awready)
+             ------1------    -----2-----
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       162
+ EXPRESSION (S_AXI_WVALID && axi_wready)
+             ------1-----    -----2----
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       172
+ EXPRESSION (axi_bvalid && S_AXI_BREADY)
+             -----1----    ------2-----
+
+-1- -2- Status
+ 0   1  Not Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       177
+ EXPRESSION (S_AXI_ARESETN == 1'b0)
+            -----------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       201
+ EXPRESSION (write_strobe[0] && write_data[0])
+             -------1-------    ------2------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       207
+ EXPRESSION (write_strobe[0] && write_data[1])
+             -------1-------    ------2------
+
+-1- -2- Status
+ 0   1  Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       243
+ EXPRESSION (S_AXI_ARESETN == 1'b0)
+            -----------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       247
+ EXPRESSION (((~axi_arready)) && S_AXI_ARVALID && ((~axi_rvalid)))
+             --------1-------    ------2------    -------3-------
+
+-1- -2- -3- Status
+ 0   1   1  Covered
+ 1   0   1  Covered
+ 1   1   0  Covered
+ 1   1   1  Covered
+
+ LINE       267
+ EXPRESSION (S_AXI_ARESETN == 1'b0)
+            -----------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       271
+ EXPRESSION (axi_arready && S_AXI_ARVALID && ((~axi_rvalid)))
+             -----1-----    ------2------    -------3-------
+
+-1- -2- -3- Status
+ 0   1   1  Covered
+ 1   0   1  Not Covered
+ 1   1   0  Not Covered
+ 1   1   1  Covered
+
+ LINE       275
+ EXPRESSION (axi_rvalid && S_AXI_RREADY)
+             -----1----    ------2-----
+
+-1- -2- Status
+ 0   1  Not Covered
+ 1   0  Covered
+ 1   1  Covered
+
+ LINE       318
+ EXPRESSION (S_AXI_ARESETN == 1'b0)
+            -----------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       147
+ EXPRESSION (aw_pending && w_pending && ((!axi_bvalid)))
+             -----1----    ----2----    -------3-------
+
+-1- -2- -3- Status
+ 0   1   1  Covered
+ 1   0   1  Covered
+ 1   1   0  Not Covered
+ 1   1   1  Covered
+
+ LINE       285
+ EXPRESSION (axi_arready & S_AXI_ARVALID & ((~axi_rvalid)))
+             -----1-----   ------2------   -------3-------
+
+-1- -2- -3- Status
+ 0   1   1  Covered
+ 1   0   1  Not Covered
+ 1   1   0  Not Covered
+ 1   1   1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : spi_v1_0_S00_AXI
+                Total Covered Percent 
+Totals          52    37      71.15   
+Total Bits      770   580     75.32   
+Total Bits 0->1 385   290     75.32   
+Total Bits 1->0 385   290     75.32   
+
+                              
+Ports          27  20  74.07  
+Port Bits      250 220 88.00  
+Port Bits 0->1 125 110 88.00  
+Port Bits 1->0 125 110 88.00  
+
+                                
+Signals          25  17  68.00  
+Signal Bits      520 360 69.23  
+Signal Bits 0->1 260 180 69.23  
+Signal Bits 1->0 260 180 69.23  
+
+Port Details
+                  Toggle Toggle 1->0 Toggle 0->1 Direction 
+start_pulse       Yes    Yes         Yes         OUTPUT    
+tx_data[7:0]      Yes    Yes         Yes         OUTPUT    
+clk_div[6:0]      Yes    Yes         Yes         OUTPUT    
+clk_div[7]        No     No          No          OUTPUT    
+spi_busy          Yes    Yes         Yes         INPUT     
+spi_done          Yes    Yes         Yes         INPUT     
+spi_rx_data[7:0]  Yes    Yes         Yes         INPUT     
+S_AXI_ACLK        Yes    Yes         Yes         INPUT     
+S_AXI_ARESETN     Yes    Yes         Yes         INPUT     
+S_AXI_AWADDR[1:0] No     No          No          INPUT     
+S_AXI_AWADDR[3:2] Yes    Yes         Yes         INPUT     
+S_AXI_AWPROT[2:0] No     No          No          INPUT     
+S_AXI_AWVALID     Yes    Yes         Yes         INPUT     
+S_AXI_AWREADY     Yes    Yes         Yes         OUTPUT    
+S_AXI_WDATA[31:0] Yes    Yes         Yes         INPUT     
+S_AXI_WSTRB[3:0]  Yes    Yes         Yes         INPUT     
+S_AXI_WVALID      Yes    Yes         Yes         INPUT     
+S_AXI_WREADY      Yes    Yes         Yes         OUTPUT    
+S_AXI_BRESP[1:0]  No     No          No          OUTPUT    
+S_AXI_BVALID      Yes    Yes         Yes         OUTPUT    
+S_AXI_BREADY      Yes    Yes         Yes         INPUT     
+S_AXI_ARADDR[1:0] No     No          No          INPUT     
+S_AXI_ARADDR[3:2] Yes    Yes         Yes         INPUT     
+S_AXI_ARPROT[2:0] No     No          No          INPUT     
+S_AXI_ARVALID     Yes    Yes         Yes         INPUT     
+S_AXI_ARREADY     Yes    Yes         Yes         OUTPUT    
+S_AXI_RDATA[31:0] Yes    Yes         Yes         OUTPUT    
+S_AXI_RRESP[1:0]  No     No          No          OUTPUT    
+S_AXI_RVALID      Yes    Yes         Yes         OUTPUT    
+S_AXI_RREADY      Yes    Yes         Yes         INPUT     
+
+Signal Details
+                   Toggle Toggle 1->0 Toggle 0->1 
+axi_awaddr[1:0]    No     No          No          
+axi_awaddr[3:2]    Yes    Yes         Yes         
+axi_awready        Yes    Yes         Yes         
+axi_wready         Yes    Yes         Yes         
+axi_bresp[1:0]     No     No          No          
+axi_bvalid         Yes    Yes         Yes         
+axi_araddr[1:0]    No     No          No          
+axi_araddr[3:2]    Yes    Yes         Yes         
+axi_arready        Yes    Yes         Yes         
+axi_rdata[31:0]    Yes    Yes         Yes         
+axi_rresp[1:0]     No     No          No          
+axi_rvalid         Yes    Yes         Yes         
+slv_reg0[1:0]      Yes    Yes         Yes         
+slv_reg0[7:2]      No     No          No          
+slv_reg0[14:8]     Yes    Yes         Yes         
+slv_reg0[15]       No     No          No          
+slv_reg0[31:16]    Yes    Yes         Yes         
+slv_reg1[31:0]     Yes    Yes         Yes         
+slv_reg2[31:0]     No     No          No          
+slv_reg3[31:0]     No     No          No          
+slv_reg_rden       Yes    Yes         Yes         
+slv_reg_wren       Yes    Yes         Yes         
+reg_data_out[31:0] Yes    Yes         Yes         
+aw_en              No     No          No          
+start_pulse_r      Yes    Yes         Yes         
+done_sticky        Yes    Yes         Yes         
+rx_data_reg[7:0]   Yes    Yes         Yes         
+aw_pending         Yes    Yes         Yes         
+w_pending          Yes    Yes         Yes         
+write_data[31:0]   Yes    Yes         Yes         
+write_strobe[3:0]  Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : spi_v1_0_S00_AXI
+         Line No. Total Covered Percent 
+Branches          35    34      97.14   
+IF       149      8     8       100.00  
+IF       177      12    11      91.67   
+IF       243      3     3       100.00  
+IF       267      4     4       100.00  
+CASE     287      5     5       100.00  
+IF       318      3     3       100.00  
+
+
+149                if (!S_AXI_ARESETN) begin
+                   -1-  
+150                    aw_pending <= 0;
+                       ==>
+151                    w_pending <= 0;
+152                    axi_awaddr <= 0;
+153                    write_data <= 0;
+154                    write_strobe <= 0;
+155                    axi_bvalid <= 0;
+156                    axi_bresp <= 0;
+157                end else begin
+158                    if (S_AXI_AWVALID && axi_awready) begin
+                       -2-  
+159                        axi_awaddr <= S_AXI_AWADDR;
+                           ==>
+160                        aw_pending <= 1;
+161                    end
+                       MISSING_ELSE
+                       ==>
+162                    if (S_AXI_WVALID && axi_wready) begin
+                       -3-  
+163                        write_data <= S_AXI_WDATA;
+                           ==>
+164                        write_strobe <= S_AXI_WSTRB;
+165                        w_pending <= 1;
+166                    end
+                       MISSING_ELSE
+                       ==>
+167                    if (slv_reg_wren) begin
+                       -4-  
+168                        aw_pending <= 0;
+                           ==>
+169                        w_pending <= 0;
+170                        axi_bvalid <= 1;
+171                        axi_bresp <= 0;
+172                    end else if (axi_bvalid && S_AXI_BREADY) axi_bvalid <= 0;
+                                -5-  
+                       ==>
+                       MISSING_ELSE
+                       ==>
+
+Branches:
+
+-1- -2- -3- -4- -5- Status  
+1   -   -   -   -   Covered 
+0   1   -   -   -   Covered 
+0   0   -   -   -   Covered 
+0   -   1   -   -   Covered 
+0   -   0   -   -   Covered 
+0   -   -   1   -   Covered 
+0   -   -   0   1   Covered 
+0   -   -   0   0   Covered 
+
+
+177                if (S_AXI_ARESETN == 1'b0) begin
+                   -1-  
+178                    slv_reg0 <= 32'h0000_6400;  // clk_div = 100
+                       ==>
+179                    slv_reg1 <= 0;
+180                    slv_reg2 <= 0;
+181                    slv_reg3 <= 0;
+182        
+183                    start_pulse_r <= 1'b0;
+184                    done_sticky <= 1'b0;
+185                    rx_data_reg <= 8'd0;
+186                end else begin
+187                    start_pulse_r <= 1'b0;
+188        
+189                    if (spi_done) begin
+                       -2-  
+190                        done_sticky <= 1'b1;
+                           ==>
+191                        rx_data_reg <= spi_rx_data;
+192                    end
+                       MISSING_ELSE
+                       ==>
+193                    if (slv_reg_wren) begin
+                       -3-  
+194                        case (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+                           -4-  
+195                            2'h0: begin
+196                                // CR register
+197                                for (byte_index=0; byte_index<C_S_AXI_DATA_WIDTH/8; byte_index=byte_index+1)
+198                                    if (write_strobe[byte_index]) slv_reg0[byte_index*8+:8] <= write_data[byte_index*8+:8];
+199        
+200                                // CR[0] = START
+201                                if (write_strobe[0] && write_data[0]) begin
+                                   -5-  
+202                                    start_pulse_r <= 1'b1;
+                                       ==>
+203                                    done_sticky   <= 1'b0;
+204                                end
+                                   MISSING_ELSE
+                                   ==>
+205        
+206                                // CR[1] = CLR_STATUS
+207                                if (write_strobe[0] && write_data[1]) begin
+                                   -6-  
+208                                    done_sticky <= 1'b0;
+                                       ==>
+209                                end
+                                   MISSING_ELSE
+                                   ==>
+210                            end
+211        
+212                            2'h1: begin
+213                                // TXDATA register
+214                                for (byte_index=0; byte_index<C_S_AXI_DATA_WIDTH/8; byte_index=byte_index+1)
+                                   ==>
+215                                    if (write_strobe[byte_index]) slv_reg1[byte_index*8+:8] <= write_data[byte_index*8+:8];
+216                            end
+217        
+218                            2'h2: begin
+219                                // RXDATA is read-only
+220                                slv_reg2 <= slv_reg2;
+                                   ==>
+221                            end
+222        
+223                            2'h3: begin
+224                                // SR is read-only
+225                                slv_reg3 <= slv_reg3;
+                                   ==>
+226                            end
+227        
+228                            default: begin
+                               ==>
+229                            end
+230                        endcase
+231                    end
+                       MISSING_ELSE
+                       ==>
+
+Branches:
+
+-1- -2- -3- -4-     -5- -6- Status      
+1   -   -   -       -   -   Covered     
+0   1   -   -       -   -   Covered     
+0   0   -   -       -   -   Covered     
+0   -   1   2'h0    1   -   Covered     
+0   -   1   2'h0    0   -   Covered     
+0   -   1   2'h0    -   1   Covered     
+0   -   1   2'h0    -   0   Covered     
+0   -   1   2'h1    -   -   Covered     
+0   -   1   2'h2    -   -   Covered     
+0   -   1   2'h3    -   -   Covered     
+0   -   1   default -   -   Not Covered 
+0   -   0   -       -   -   Covered     
+
+
+243                if (S_AXI_ARESETN == 1'b0) begin
+                   -1-  
+244                    axi_arready <= 1'b0;
+                       ==>
+245                    axi_araddr  <= 32'b0;
+246                end else begin
+247                    if (~axi_arready && S_AXI_ARVALID && ~axi_rvalid) begin
+                       -2-  
+248                        // indicates that the slave has acceped the valid read address
+249                        axi_arready <= 1'b1;
+                           ==>
+250                        // Read address latching
+251                        axi_araddr  <= S_AXI_ARADDR;
+252                    end else begin
+253                        axi_arready <= 1'b0;
+                           ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+267                if (S_AXI_ARESETN == 1'b0) begin
+                   -1-  
+268                    axi_rvalid <= 0;
+                       ==>
+269                    axi_rresp  <= 0;
+270                end else begin
+271                    if (axi_arready && S_AXI_ARVALID && ~axi_rvalid) begin
+                       -2-  
+272                        // Valid read data is available at the read data bus
+273                        axi_rvalid <= 1'b1;
+                           ==>
+274                        axi_rresp  <= 2'b0;  // 'OKAY' response
+275                    end else if (axi_rvalid && S_AXI_RREADY) begin
+                                -3-  
+276                        // Read data is accepted by the master
+277                        axi_rvalid <= 1'b0;
+                           ==>
+278                    end
+                       MISSING_ELSE
+                       ==>
+
+Branches:
+
+-1- -2- -3- Status  
+1   -   -   Covered 
+0   1   -   Covered 
+0   0   1   Covered 
+0   0   0   Covered 
+
+
+287                case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
+                   -1-  
+288                    2'h0: begin
+289                        // CR
+290                        reg_data_out = slv_reg0;
+                           ==>
+291                    end
+292        
+293                    2'h1: begin
+294                        // TXDATA
+295                        reg_data_out = slv_reg1;
+                           ==>
+296                    end
+297        
+298                    2'h2: begin
+299                        // RXDATA
+300                        reg_data_out = {24'd0, rx_data_reg};
+                           ==>
+301                    end
+302        
+303                    2'h3: begin
+304                        // SR
+305                        // bit0 = busy
+306                        // bit1 = done
+307                        reg_data_out = {30'd0, done_sticky, spi_busy};
+                           ==>
+308                    end
+309        
+310                    default: begin
+311                        reg_data_out = 32'd0;
+                           ==>
+
+Branches:
+
+-1-     Status  
+2'h0    Covered 
+2'h1    Covered 
+2'h2    Covered 
+2'h3    Covered 
+default Covered 
+
+
+318                if (S_AXI_ARESETN == 1'b0) begin
+                   -1-  
+319                    axi_rdata <= 0;
+                       ==>
+320                end else begin
+321                    // When there is a valid read address (S_AXI_ARVALID) with 
+322                    // acceptance of read address by the slave (axi_arready), 
+323                    // output the read dada 
+324                    if (slv_reg_rden) begin
+                       -2-  
+325                        axi_rdata <= reg_data_out;  // register read data
+                           ==>
+326                    end
+                       MISSING_ELSE
+                       ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.dut.spi_v1_0_S00_AXI_inst
+===============================================================================
+
+Instance :
+
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT        
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --     
+
+
+Instance's subtree :
+
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT        
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --     
+
+
+Module : 
+
+SCORE   LINE          COND          TOGGLE          FSM            BRANCH        ASSERT         NAME             
+ 89.47  100.00 76/76   85.42 41/48   75.32 580/770  --     --       97.14 34/35  --     --      spi_v1_0_S00_AXI 
+
+
+Parent : 
+
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT         NAME 
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --      dut  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : spi_master
+===============================================================================
+SCORE   LINE          COND        TOGGLE          FSM         BRANCH        ASSERT        
+ 94.13  100.00 77/77  100.00 6/6   87.31 234/268   83.33 5/6  100.00 14/14  --     --     
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/rtl/spi_master.v
+
+Module self-instances :
+
+SCORE   LINE          COND        TOGGLE          FSM         BRANCH        ASSERT         NAME                    
+ 94.13  100.00 77/77  100.00 6/6   87.31 234/268   83.33 5/6  100.00 14/14  --     --      tb_top.dut.u_spi_master 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : spi_master
+
+             Line No.   Total   Covered  Percent
+TOTAL                       77       77   100.00
+ALWAYS             73       52       52   100.00
+ALWAYS            168       25       25   100.00
+
+72                          always @(*) begin
+73         1/1                  n_state        = c_state;
+74                      
+75         1/1                  n_div_cnt      = c_div_cnt;
+76         1/1                  n_clk_div      = c_clk_div;
+77                      
+78         1/1                  n_sclk         = c_sclk;
+79         1/1                  n_mosi         = c_mosi;
+80         1/1                  n_cs_n         = c_cs_n;
+81         1/1                  n_tx_busy      = c_tx_busy;
+82         1/1                  n_rx_done      = 1'b0;
+83                      
+84         1/1                  n_tx_shift_reg = c_tx_shift_reg;
+85         1/1                  n_rx_shift_reg = c_rx_shift_reg;
+86         1/1                  n_rx_data      = c_rx_data;
+87         1/1                  n_bit_cnt      = c_bit_cnt;
+88                      
+89         1/1                  half_tick      = 1'b0;
+90                      
+91                              // Generate one half SCLK period from the programmed divider.
+92         1/1                  if (c_state == DATA) begin
+93         1/1                      if (c_div_cnt >= c_clk_div) begin
+94         1/1                          n_div_cnt = 8'd0;
+95         1/1                          half_tick = 1'b1;
+96                                  end else begin
+97         1/1                          n_div_cnt = c_div_cnt + 1'b1;
+98                                  end
+99                              end else begin
+100        1/1                      n_div_cnt = 8'd0;
+101                             end
+102                     
+103        1/1                  case (c_state)
+104                                 IDLE: begin
+105        1/1                          n_sclk    = 1'b0;   // Mode 0: CPOL=0
+106        1/1                          n_mosi    = 1'b0;
+107        1/1                          n_cs_n    = 1'b1;
+108        1/1                          n_tx_busy = 1'b0;
+109        1/1                          n_bit_cnt = 3'd0;
+110                     
+111        1/1                          if (start) begin
+112        1/1                              n_state = LOAD;
+113                                     end
+                        MISSING_ELSE
+114                                 end
+115                     
+116                                 LOAD: begin
+117        1/1                          n_cs_n         = 1'b0;
+118        1/1                          n_tx_busy      = 1'b1;
+119        1/1                          n_clk_div      = clk_div;
+120                     
+121                                     // First MOSI bit is preloaded for SPI mode 0.
+122        1/1                          n_mosi         = tx_data[7];
+123        1/1                          n_tx_shift_reg = {tx_data[6:0], 1'b0};
+124                     
+125        1/1                          n_rx_shift_reg = 8'd0;
+126        1/1                          n_bit_cnt      = 3'd0;
+127        1/1                          n_state        = DATA;
+128                                 end
+129                     
+130                                 DATA: begin
+131        1/1                          if (half_tick) begin
+132        1/1                              n_sclk = ~c_sclk;
+133                     
+134        1/1                              if (c_sclk == 1'b0) begin
+135                                             // Rising edge: sample MISO.
+136        1/1                                  n_rx_shift_reg = {c_rx_shift_reg[6:0], miso};
+137                     
+138        1/1                                  if (c_bit_cnt == 3'd7) begin
+139        1/1                                      n_rx_data = {c_rx_shift_reg[6:0], miso};
+140        1/1                                      n_state   = STOP;
+141                                             end else begin
+142        1/1                                      n_bit_cnt = c_bit_cnt + 1'b1;
+143                                             end
+144                                         end else begin
+145                                             // Falling edge: update MOSI.
+146        1/1                                  n_mosi         = c_tx_shift_reg[7];
+147        1/1                                  n_tx_shift_reg = {c_tx_shift_reg[6:0], 1'b0};
+148                                         end
+149                                     end
+                        MISSING_ELSE
+150                                 end
+151                     
+152                                 STOP: begin
+153        1/1                          n_sclk    = 1'b0;
+154        1/1                          n_cs_n    = 1'b1;
+155        1/1                          n_tx_busy = 1'b0;
+156        1/1                          n_rx_done = 1'b1;
+157        1/1                          n_mosi    = 1'b0;
+158        1/1                          n_state   = IDLE;
+159                                 end
+160                     
+161                                 default: begin
+162        1/1                          n_state = IDLE;
+163                                 end
+164                             endcase
+165                         end
+166                     
+167                         always @(posedge clk or posedge reset) begin
+168        1/1                  if (reset) begin
+169        1/1                      c_state        <= IDLE;
+170                     
+171        1/1                      c_div_cnt      <= 8'd0;
+172        1/1                      c_clk_div      <= 8'd0;
+173                     
+174        1/1                      c_sclk         <= 1'b0;
+175        1/1                      c_mosi         <= 1'b0;
+176        1/1                      c_cs_n         <= 1'b1;
+177        1/1                      c_tx_busy      <= 1'b0;
+178        1/1                      c_rx_done      <= 1'b0;
+179                     
+180        1/1                      c_tx_shift_reg <= 8'd0;
+181        1/1                      c_rx_shift_reg <= 8'd0;
+182        1/1                      c_rx_data      <= 8'd0;
+183        1/1                      c_bit_cnt      <= 3'd0;
+184                             end else begin
+185        1/1                      c_state        <= n_state;
+186                     
+187        1/1                      c_div_cnt      <= n_div_cnt;
+188        1/1                      c_clk_div      <= n_clk_div;
+189                     
+190        1/1                      c_sclk         <= n_sclk;
+191        1/1                      c_mosi         <= n_mosi;
+192        1/1                      c_cs_n         <= n_cs_n;
+193        1/1                      c_tx_busy      <= n_tx_busy;
+194        1/1                      c_rx_done      <= n_rx_done;
+195                     
+196        1/1                      c_tx_shift_reg <= n_tx_shift_reg;
+197        1/1                      c_rx_shift_reg <= n_rx_shift_reg;
+198        1/1                      c_rx_data      <= n_rx_data;
+199        1/1                      c_bit_cnt      <= n_bit_cnt;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : spi_master
+
+               Total   Covered  Percent
+Conditions          6        6   100.00
+Logical             6        6   100.00
+Non-Logical         0        0
+Event               0        0
+
+ LINE       92
+ EXPRESSION (c_state == DATA)
+            --------1--------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       134
+ EXPRESSION (c_sclk == 1'b0)
+            --------1-------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       138
+ EXPRESSION (c_bit_cnt == 3'd7)
+            ---------1---------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : spi_master
+                Total Covered Percent 
+Totals          37    30      81.08   
+Total Bits      268   234     87.31   
+Total Bits 0->1 134   117     87.31   
+Total Bits 1->0 134   117     87.31   
+
+                            
+Ports          12 11 91.67  
+Port Bits      66 64 96.97  
+Port Bits 0->1 33 32 96.97  
+Port Bits 1->0 33 32 96.97  
+
+                                
+Signals          25  19  76.00  
+Signal Bits      202 170 84.16  
+Signal Bits 0->1 101 85  84.16  
+Signal Bits 1->0 101 85  84.16  
+
+Port Details
+             Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk          Yes    Yes         Yes         INPUT     
+reset        Yes    Yes         Yes         INPUT     
+start        Yes    Yes         Yes         INPUT     
+clk_div[6:0] Yes    Yes         Yes         INPUT     
+clk_div[7]   No     No          No          INPUT     
+tx_data[7:0] Yes    Yes         Yes         INPUT     
+tx_busy      Yes    Yes         Yes         OUTPUT    
+rx_data[7:0] Yes    Yes         Yes         OUTPUT    
+rx_done      Yes    Yes         Yes         OUTPUT    
+sclk         Yes    Yes         Yes         OUTPUT    
+mosi         Yes    Yes         Yes         OUTPUT    
+miso         Yes    Yes         Yes         INPUT     
+cs_n         Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                    Toggle Toggle 1->0 Toggle 0->1 
+c_state[1:0]        Yes    Yes         Yes         
+n_state[1:0]        Yes    Yes         Yes         
+c_div_cnt[3:0]      Yes    Yes         Yes         
+c_div_cnt[7:4]      No     No          No          
+n_div_cnt[3:0]      Yes    Yes         Yes         
+n_div_cnt[7:4]      No     No          No          
+c_clk_div[4:0]      Yes    Yes         Yes         
+c_clk_div[7:5]      No     No          No          
+n_clk_div[4:0]      Yes    Yes         Yes         
+n_clk_div[7:5]      No     No          No          
+c_sclk              Yes    Yes         Yes         
+n_sclk              Yes    Yes         Yes         
+c_mosi              Yes    Yes         Yes         
+n_mosi              Yes    Yes         Yes         
+c_cs_n              Yes    Yes         Yes         
+n_cs_n              Yes    Yes         Yes         
+c_tx_busy           Yes    Yes         Yes         
+n_tx_busy           Yes    Yes         Yes         
+c_rx_done           Yes    Yes         Yes         
+n_rx_done           Yes    Yes         Yes         
+c_tx_shift_reg[0]   No     No          No          
+c_tx_shift_reg[7:1] Yes    Yes         Yes         
+n_tx_shift_reg[0]   No     No          No          
+n_tx_shift_reg[7:1] Yes    Yes         Yes         
+c_rx_shift_reg[7:0] Yes    Yes         Yes         
+n_rx_shift_reg[7:0] Yes    Yes         Yes         
+c_rx_data[7:0]      Yes    Yes         Yes         
+n_rx_data[7:0]      Yes    Yes         Yes         
+c_bit_cnt[2:0]      Yes    Yes         Yes         
+n_bit_cnt[2:0]      Yes    Yes         Yes         
+half_tick           Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+FSM Coverage for Module : spi_master
+Summary for FSM :: c_state
+            Total Covered Percent                         
+States      4     4       100.00  (Not included in score) 
+Transitions 6     5       83.33                           
+Sequences   0     0                                       
+
+State, Transition and Sequence Details for FSM :: c_state
+-------------------------------------------------------------------------------
+states Line No. Covered 
+DATA   127      Covered 
+IDLE   169      Covered 
+LOAD   112      Covered 
+STOP   140      Covered 
+
+transitions Line No. Covered     
+DATA->IDLE  169      Covered     
+DATA->STOP  140      Covered     
+IDLE->LOAD  112      Covered     
+LOAD->DATA  127      Covered     
+LOAD->IDLE  169      Not Covered 
+STOP->IDLE  169      Covered     
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : spi_master
+         Line No. Total Covered Percent 
+Branches          14    14      100.00  
+IF       92       3     3       100.00  
+CASE     103      9     9       100.00  
+IF       168      2     2       100.00  
+
+
+92                 if (c_state == DATA) begin
+                   -1-  
+93                     if (c_div_cnt >= c_clk_div) begin
+                       -2-  
+94                         n_div_cnt = 8'd0;
+                           ==>
+95                         half_tick = 1'b1;
+96                     end else begin
+97                         n_div_cnt = c_div_cnt + 1'b1;
+                           ==>
+98                     end
+99                 end else begin
+100                    n_div_cnt = 8'd0;
+                       ==>
+
+Branches:
+
+-1- -2- Status  
+1   1   Covered 
+1   0   Covered 
+0   -   Covered 
+
+
+103                case (c_state)
+                   -1-  
+104                    IDLE: begin
+105                        n_sclk    = 1'b0;   // Mode 0: CPOL=0
+106                        n_mosi    = 1'b0;
+107                        n_cs_n    = 1'b1;
+108                        n_tx_busy = 1'b0;
+109                        n_bit_cnt = 3'd0;
+110        
+111                        if (start) begin
+                           -2-  
+112                            n_state = LOAD;
+                               ==>
+113                        end
+                           MISSING_ELSE
+                           ==>
+114                    end
+115        
+116                    LOAD: begin
+117                        n_cs_n         = 1'b0;
+                           ==>
+118                        n_tx_busy      = 1'b1;
+119                        n_clk_div      = clk_div;
+120        
+121                        // First MOSI bit is preloaded for SPI mode 0.
+122                        n_mosi         = tx_data[7];
+123                        n_tx_shift_reg = {tx_data[6:0], 1'b0};
+124        
+125                        n_rx_shift_reg = 8'd0;
+126                        n_bit_cnt      = 3'd0;
+127                        n_state        = DATA;
+128                    end
+129        
+130                    DATA: begin
+131                        if (half_tick) begin
+                           -3-  
+132                            n_sclk = ~c_sclk;
+133        
+134                            if (c_sclk == 1'b0) begin
+                               -4-  
+135                                // Rising edge: sample MISO.
+136                                n_rx_shift_reg = {c_rx_shift_reg[6:0], miso};
+137        
+138                                if (c_bit_cnt == 3'd7) begin
+                                   -5-  
+139                                    n_rx_data = {c_rx_shift_reg[6:0], miso};
+                                       ==>
+140                                    n_state   = STOP;
+141                                end else begin
+142                                    n_bit_cnt = c_bit_cnt + 1'b1;
+                                       ==>
+143                                end
+144                            end else begin
+145                                // Falling edge: update MOSI.
+146                                n_mosi         = c_tx_shift_reg[7];
+                                   ==>
+147                                n_tx_shift_reg = {c_tx_shift_reg[6:0], 1'b0};
+148                            end
+149                        end
+                           MISSING_ELSE
+                           ==>
+150                    end
+151        
+152                    STOP: begin
+153                        n_sclk    = 1'b0;
+                           ==>
+154                        n_cs_n    = 1'b1;
+155                        n_tx_busy = 1'b0;
+156                        n_rx_done = 1'b1;
+157                        n_mosi    = 1'b0;
+158                        n_state   = IDLE;
+159                    end
+160        
+161                    default: begin
+162                        n_state = IDLE;
+                           ==>
+
+Branches:
+
+-1-     -2- -3- -4- -5- Status  
+IDLE    1   -   -   -   Covered 
+IDLE    0   -   -   -   Covered 
+LOAD    -   -   -   -   Covered 
+DATA    -   1   1   1   Covered 
+DATA    -   1   1   0   Covered 
+DATA    -   1   0   -   Covered 
+DATA    -   0   -   -   Covered 
+STOP    -   -   -   -   Covered 
+default -   -   -   -   Covered 
+
+
+168                if (reset) begin
+                   -1-  
+169                    c_state        <= IDLE;
+                       ==>
+170        
+171                    c_div_cnt      <= 8'd0;
+172                    c_clk_div      <= 8'd0;
+173        
+174                    c_sclk         <= 1'b0;
+175                    c_mosi         <= 1'b0;
+176                    c_cs_n         <= 1'b1;
+177                    c_tx_busy      <= 1'b0;
+178                    c_rx_done      <= 1'b0;
+179        
+180                    c_tx_shift_reg <= 8'd0;
+181                    c_rx_shift_reg <= 8'd0;
+182                    c_rx_data      <= 8'd0;
+183                    c_bit_cnt      <= 3'd0;
+184                end else begin
+185                    c_state        <= n_state;
+                       ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.dut.u_spi_master
+===============================================================================
+
+Instance :
+
+SCORE   LINE          COND        TOGGLE          FSM         BRANCH        ASSERT        
+ 94.13  100.00 77/77  100.00 6/6   87.31 234/268   83.33 5/6  100.00 14/14  --     --     
+
+
+Instance's subtree :
+
+SCORE   LINE          COND        TOGGLE          FSM         BRANCH        ASSERT        
+ 94.13  100.00 77/77  100.00 6/6   87.31 234/268   83.33 5/6  100.00 14/14  --     --     
+
+
+Module : 
+
+SCORE   LINE          COND        TOGGLE          FSM         BRANCH        ASSERT         NAME       
+ 94.13  100.00 77/77  100.00 6/6   87.31 234/268   83.33 5/6  100.00 14/14  --     --      spi_master 
+
+
+Parent : 
+
+SCORE   LINE           COND           TOGGLE          FSM            BRANCH         ASSERT         NAME 
+ 88.37  --     --      --     --       88.37 228/258  --     --      --     --      --     --      dut  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : protocol_assertions
+===============================================================================
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+100.00  --     --      --     --      --     --      --     --      --     --      100.00 5/5 
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/enhanced/protocol_assertions.sv
+
+Module self-instances :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT      NAME              
+100.00  --     --      --     --      --     --      --     --      --     --      100.00 5/5  tb_top.assertions 
+
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : protocol_assertions
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       5     5         100.00  5                 100.00  
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            5     5         100.00  5                 100.00  
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name  Attempts Real Successes Failures Incomplete 
+ap_ar 146718   7325           0        0          
+ap_aw 146718   117            0        0          
+ap_b  146718   28375          0        0          
+ap_r  146718   26725          0        0          
+ap_w  146718   117            0        0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.assertions
+===============================================================================
+
+Instance :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+100.00  --     --      --     --      --     --      --     --      --     --      100.00 5/5 
+
+
+Instance's subtree :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT     
+100.00  --     --      --     --      --     --      --     --      --     --      100.00 5/5 
+
+
+Module : 
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT      NAME                
+100.00  --     --      --     --      --     --      --     --      --     --      100.00 5/5  protocol_assertions 
+
+
+Parent : 
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT         NAME   
+--      --     --      --     --      --     --      --     --      --     --      --     --      tb_top 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : tb_top
+===============================================================================
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT        
+--      --     --      --     --      --     --      --     --      --     --      --     --     
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/enhanced/tb_top.sv
+
+Module self-instances :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT         NAME   
+--      --     --      --     --      --     --      --     --      --     --      --     --      tb_top 
+
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top
+===============================================================================
+
+Instance :
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT        
+--      --     --      --     --      --     --      --     --      --     --      --     --     
+
+
+Instance's subtree :
+
+SCORE   LINE            COND          TOGGLE            FSM         BRANCH        ASSERT     
+ 91.46  100.00 153/153   87.04 47/54   80.40 1042/1296   83.33 5/6   97.96 48/49  100.00 5/5 
+
+
+Module : 
+
+SCORE   LINE           COND           TOGGLE         FSM            BRANCH         ASSERT         NAME   
+--      --     --      --     --      --     --      --     --      --     --      --     --      tb_top 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE   LINE            COND           TOGGLE            FSM            BRANCH         ASSERT         NAME       
+100.00  --     --       --     --      --     --         --     --      --     --      100.00 5/5     assertions 
+ 89.75  100.00 153/153   87.04 47/54    80.40 1042/1296   83.33 5/6      97.96 48/49   --     --      dut        
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.

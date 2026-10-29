@@ -1,0 +1,62 @@
+--- runs/fixed_v4/source_snapshot/tb/enhanced/enhanced_classes.sv	2026-10-19 20:55:42.708091615 +0900
++++ tb/enhanced/enhanced_classes.sv	2026-10-19 21:04:37.156842276 +0900
+@@ -21,6 +21,8 @@
+  int reset_aborted_aw=0,reset_aborted_w=0,reset_aborted_ar=0;
+  logic [3:0] awq[$]; logic [31:0] wq[$]; logic [3:0] strbq[$];
+  logic [31:0] readq[$];
++ logic [3:0] readaddrq[$];
++ int legacy_done_forwarded=0,legacy_non_sr_rejected=0;
+  logic [7:0] expected_mosi[$]; logic [7:0] expected_miso[$];
+  int cov_order,cov_strobe,cov_addr,cov_rw,cov_stall,cov_gap;
+  int order_counts[3], strobe_counts[16], address_counts[4], stall_counts[3];
+@@ -44,7 +46,7 @@
+  function void reset_model();
+   cr=32'h6400; tx=0;rx=0;done=0;done_delay=0;resets++;
+   reset_aborted_aw=accepted_aw-completed_b;reset_aborted_w=accepted_w-completed_b;reset_aborted_ar=accepted_ar-completed_r;
+-  awq.delete();wq.delete();strbq.delete();readq.delete();
++  awq.delete();wq.delete();strbq.delete();readq.delete();readaddrq.delete();
+   if(expected_mosi.size()) aborted_spi+=expected_mosi.size();
+   expected_mosi.delete();expected_miso.delete();
+  endfunction
+@@ -85,15 +87,23 @@
+     if(v.WVALID&&v.WREADY)begin wq.push_back(v.WDATA);strbq.push_back(v.WSTRB);accepted_w++;end
+     if(awq.size()&&wq.size())begin a=awq.pop_front();d=wq.pop_front();st=strbq.pop_front();write_model(a,d,st);end
+     if(v.ARVALID&&v.ARREADY)begin
+-     verify(!$isunknown(v.ARADDR),"X/Z AR address");readq.push_back(expected_read(v.ARADDR));accepted_ar++;
++     verify(!$isunknown(v.ARADDR),"X/Z AR address");readq.push_back(expected_read(v.ARADDR));readaddrq.push_back(v.ARADDR);accepted_ar++;
+     end
+     if(v.BVALID&&v.BREADY)begin completed_b++;verify(v.BRESP===0,"BRESP not OKAY/known");end
+     if(v.RVALID&&v.RREADY)begin
+      completed_r++;reads++;
+-     verify(readq.size()>0,"Unexpected/duplicate R response");
+-     if(readq.size())begin exp=readq.pop_front();verify(v.RDATA===exp,$sformatf("Read mismatch expected=%08h actual=%08h",exp,v.RDATA));end
++     verify(readq.size()>0&&readaddrq.size()>0,"Unexpected/duplicate R response or missing paired AR address");
++     if(readq.size()&&readaddrq.size())begin
++      exp=readq.pop_front();a=readaddrq.pop_front();
++      verify(v.RDATA===exp,$sformatf("Read mismatch addr=%h expected=%08h actual=%08h",a,exp,v.RDATA));
++      // Forward legacy DONE only for the actual paired status-register read.
++      if(v.RDATA[1]&&done)begin
++       if(a==SPI_AXI_SR_ADDR)begin
++        axi_lite_transaction tr;tr=new();tr.kind=AXI_LITE_ITEM_READ;tr.addr=a;tr.rdata=v.RDATA;legacy.axi_fifo.write(tr);legacy_done_forwarded++;
++       end else legacy_non_sr_rejected++;
++      end
++     end
+      verify(v.RRESP===0,"RRESP not OKAY/known");
+-     if(v.RDATA[1] && done)begin axi_lite_transaction tr;tr=new();tr.kind=AXI_LITE_ITEM_READ;tr.addr=12;tr.rdata=v.RDATA;legacy.axi_fifo.write(tr);end
+     end
+    end
+   end
+@@ -125,11 +135,12 @@
+   protocol_cg.sample(tr.op==0?tr.order:-1,tr.op==0?int'(tr.strb):-1,tr.addr[3:2],tr.op,st);
+  endfunction
+  function void report_phase(uvm_phase phase);
+-  verify(awq.size()==0&&wq.size()==0&&readq.size()==0&&expected_mosi.size()==0,"Pending queue at end of test");
++  verify(awq.size()==0&&wq.size()==0&&readq.size()==0&&readaddrq.size()==0&&expected_mosi.size()==0,"Pending queue at end of test");
+   verify(accepted_aw-reset_aborted_aw==completed_b,"AW/B count mismatch excluding reset abort");
+   verify(accepted_w-reset_aborted_w==completed_b,"W/B count mismatch excluding reset abort");
+   verify(accepted_ar-reset_aborted_ar==completed_r,"AR/R count mismatch excluding reset abort");
+   `uvm_info("SUMMARY",$sformatf("AXI_RESULT writes=%0d reads=%0d aw=%0d w=%0d b=%0d ar=%0d r=%0d spi=%0d aborted_spi=%0d checks=%0d passes=%0d fails=%0d pending=%0d resets=%0d protocol_cov=%0.4f",writes,reads,accepted_aw,accepted_w,completed_b,accepted_ar,completed_r,spi_transfers,aborted_spi,checks,passes,fails,awq.size()+wq.size()+readq.size()+expected_mosi.size(),resets,protocol_cg.get_inst_coverage()),UVM_NONE)
++  `uvm_info("COLLECTOR",$sformatf("COLLECTOR_RESULT sr_done_samples=%0d rejected_non_sr_bit1=%0d",legacy_done_forwarded,legacy_non_sr_rejected),UVM_NONE)
+   for(int i=0;i<3;i++)`uvm_info("DIST",$sformatf("order[%0d]=%0d stall[%0d]=%0d",i,order_counts[i],i,stall_counts[i]),UVM_NONE)
+   for(int i=0;i<16;i++)`uvm_info("DIST",$sformatf("strobe[%0d]=%0d",i,strobe_counts[i]),UVM_NONE)
+  endfunction

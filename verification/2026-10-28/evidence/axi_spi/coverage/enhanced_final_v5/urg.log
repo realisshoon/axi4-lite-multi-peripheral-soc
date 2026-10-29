@@ -1,0 +1,9 @@
+Command: urg -full64 -dir runs/fixed_v5/build.vdb -report /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report -format both -show ratios -group ratio -log /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg.log
+Date: Mon Oct 19 21:05:03 2026
+
+URG Version W-2024.09-SP2 Copyright (c) 1991-2024 by Synopsys Inc.
+
+Note-[URG-RDG] Report directory generated
+  Report written to directory 
+  /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report
+

@@ -1,0 +1,9 @@
+*.vdb/
+simv
+simv.daidir/
+csrc/
+*.vcd
+*.fsdb
+__pycache__/
+*.pyc
+resource_locks/*.lock

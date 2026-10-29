@@ -1,0 +1,34 @@
+Dashboard
+
+Date: Mon Oct 19 20:52:01 2026
+
+User: pedu36
+
+Version: W-2024.09-SP2
+Command line: urg -full64 -dir /home/pedu36/workspace/20260628_axi4_lite_spi_uvm/out/cov/spi_axi.vdb -report /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/original_baseline/urg_report -format both -show ratios -group ratio -log /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/original_baseline/urg.log
+Number of tests: 1
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE   LINE            COND          TOGGLE           FSM         BRANCH        ASSERT      GROUP      
+ 69.59   96.71 147/152   58.82 40/68   44.34 541/1220   66.67 4/6   87.27 48/55   33.33 1/3  100.00 7/7 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE   LINE            COND           TOGGLE           FSM            BRANCH         ASSERT         NAME    
+ 70.76   96.71 147/152   58.82 40/68    44.34 541/1220   66.67 4/6      87.27 48/55   --     --      tb_top  
+ 33.33  --     --       --     --      --     --        --     --      --     --       33.33 1/3     uvm_pkg 
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE   LINE            COND          TOGGLE           FSM         BRANCH        ASSERT     
+ 64.53   96.71 147/152   58.82 40/68   44.34 541/1220   66.67 4/6   87.27 48/55   33.33 1/3 
+
+
+-------------------------------------------------------------------------------
+Total Groups Coverage Summary 
+COVERED EXPECTED SCORE  COVERED EXPECTED INST SCORE WEIGHT 
+7       7        100.00 7       7        100.00     1      
+

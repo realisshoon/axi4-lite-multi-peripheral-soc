@@ -1,0 +1,964 @@
+Group : enhanced_pkg::spi_axi_coverage::start_cg
+
+===============================================================================
+Group : enhanced_pkg::spi_axi_coverage::start_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                   
+100.00 1      100    1        64           64            tb_top.me.obj.start_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   enhanced_pkg::spi_axi_coverage::start_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group  enhanced_pkg::spi_axi_coverage::start_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_start 1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_start
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_start
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+start_write 163   1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : tb_top.me.obj.start_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                     
+100.00 100.00    1      100    1        1            64           64                    enhanced_pkg::spi_axi_coverage::start_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   tb_top.me.obj.start_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group Instance  tb_top.me.obj.start_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_start 1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_start
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_start
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+start_write 163   1        
+
+
+Group : enhanced_pkg::spi_axi_coverage::spi_complete_cg
+
+===============================================================================
+Group : enhanced_pkg::spi_axi_coverage::spi_complete_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                          
+100.00 1      100    1        64           64            tb_top.me.obj.spi_complete_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   enhanced_pkg::spi_axi_coverage::spi_complete_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group  enhanced_pkg::spi_axi_coverage::spi_complete_cg
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_complete 1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_complete
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_complete
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+complete 135   1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : tb_top.me.obj.spi_complete_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                            
+100.00 100.00    1      100    1        1            64           64                    enhanced_pkg::spi_axi_coverage::spi_complete_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   tb_top.me.obj.spi_complete_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group Instance  tb_top.me.obj.spi_complete_cg
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_complete 1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_complete
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_complete
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+complete 135   1        
+
+
+Group : enhanced_pkg::spi_axi_coverage::done_cg
+
+===============================================================================
+Group : enhanced_pkg::spi_axi_coverage::done_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                  
+100.00 1      100    1        64           64            tb_top.me.obj.done_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   enhanced_pkg::spi_axi_coverage::done_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group  enhanced_pkg::spi_axi_coverage::done_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_done  1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_done
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_done
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+done_seen 137   1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : tb_top.me.obj.done_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                    
+100.00 100.00    1      100    1        1            64           64                    enhanced_pkg::spi_axi_coverage::done_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   tb_top.me.obj.done_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 1        0         1       100.00  
+
+
+Variables for Group Instance  tb_top.me.obj.done_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_done  1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_done
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_done
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+done_seen 137   1        
+
+
+Group : enhanced_pkg::spi_axi_coverage::txdata_cg
+
+===============================================================================
+Group : enhanced_pkg::spi_axi_coverage::txdata_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                    
+100.00 1      100    1        64           64            tb_top.me.obj.txdata_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   enhanced_pkg::spi_axi_coverage::txdata_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group  enhanced_pkg::spi_axi_coverage::txdata_cg
+
+
+VARIABLE  EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_txdata 4        0         4       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_txdata
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for cp_txdata
+
+
+Excluded/Illegal bins
+
+NAME      COUNT STATUS   
+others_01 2     Excluded 
+others_02 5     Excluded 
+others_03 1     Excluded 
+others_04 2     Excluded 
+others_05 4     Excluded 
+others_07 1     Excluded 
+others_08 1     Excluded 
+others_09 4     Excluded 
+others_0a 1     Excluded 
+others_0b 2     Excluded 
+others_0c 2     Excluded 
+others_0d 4     Excluded 
+others_0e 2     Excluded 
+others_0f 3     Excluded 
+others_10 13    Excluded 
+others_11 2     Excluded 
+others_13 2     Excluded 
+others_14 3     Excluded 
+others_15 2     Excluded 
+others_16 4     Excluded 
+others_17 3     Excluded 
+others_18 2     Excluded 
+others_19 3     Excluded 
+others_1a 1     Excluded 
+others_1b 3     Excluded 
+others_1c 1     Excluded 
+others_1d 1     Excluded 
+others_1e 2     Excluded 
+others_20 4     Excluded 
+others_21 2     Excluded 
+others_22 3     Excluded 
+others_23 1     Excluded 
+others_24 3     Excluded 
+others_25 5     Excluded 
+others_26 1     Excluded 
+others_27 3     Excluded 
+others_28 1     Excluded 
+others_29 3     Excluded 
+others_2a 2     Excluded 
+others_2b 2     Excluded 
+others_2d 6     Excluded 
+others_2e 3     Excluded 
+others_2f 2     Excluded 
+others_30 3     Excluded 
+others_31 4     Excluded 
+others_32 2     Excluded 
+others_33 4     Excluded 
+others_34 1     Excluded 
+others_36 3     Excluded 
+others_37 3     Excluded 
+others_38 4     Excluded 
+others_39 4     Excluded 
+others_3a 4     Excluded 
+others_3b 4     Excluded 
+others_3c 2     Excluded 
+others_3d 5     Excluded 
+others_3e 1     Excluded 
+others_3f 4     Excluded 
+others_40 15    Excluded 
+others_41 16    Excluded 
+others_42 15    Excluded 
+others_43 15    Excluded 
+others_44 31    Excluded 
+others_45 15    Excluded 
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+five_a  21    1        
+a5      26    1        
+all_one 17    1        
+zero    19    1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : tb_top.me.obj.txdata_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                      
+100.00 100.00    1      100    1        1            64           64                    enhanced_pkg::spi_axi_coverage::txdata_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   tb_top.me.obj.txdata_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group Instance  tb_top.me.obj.txdata_cg
+
+
+VARIABLE  EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_txdata 4        0         4       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_txdata
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for cp_txdata
+
+
+Excluded/Illegal bins
+
+NAME      COUNT STATUS   
+others_01 2     Excluded 
+others_02 5     Excluded 
+others_03 1     Excluded 
+others_04 2     Excluded 
+others_05 4     Excluded 
+others_07 1     Excluded 
+others_08 1     Excluded 
+others_09 4     Excluded 
+others_0a 1     Excluded 
+others_0b 2     Excluded 
+others_0c 2     Excluded 
+others_0d 4     Excluded 
+others_0e 2     Excluded 
+others_0f 3     Excluded 
+others_10 13    Excluded 
+others_11 2     Excluded 
+others_13 2     Excluded 
+others_14 3     Excluded 
+others_15 2     Excluded 
+others_16 4     Excluded 
+others_17 3     Excluded 
+others_18 2     Excluded 
+others_19 3     Excluded 
+others_1a 1     Excluded 
+others_1b 3     Excluded 
+others_1c 1     Excluded 
+others_1d 1     Excluded 
+others_1e 2     Excluded 
+others_20 4     Excluded 
+others_21 2     Excluded 
+others_22 3     Excluded 
+others_23 1     Excluded 
+others_24 3     Excluded 
+others_25 5     Excluded 
+others_26 1     Excluded 
+others_27 3     Excluded 
+others_28 1     Excluded 
+others_29 3     Excluded 
+others_2a 2     Excluded 
+others_2b 2     Excluded 
+others_2d 6     Excluded 
+others_2e 3     Excluded 
+others_2f 2     Excluded 
+others_30 3     Excluded 
+others_31 4     Excluded 
+others_32 2     Excluded 
+others_33 4     Excluded 
+others_34 1     Excluded 
+others_36 3     Excluded 
+others_37 3     Excluded 
+others_38 4     Excluded 
+others_39 4     Excluded 
+others_3a 4     Excluded 
+others_3b 4     Excluded 
+others_3c 2     Excluded 
+others_3d 5     Excluded 
+others_3e 1     Excluded 
+others_3f 4     Excluded 
+others_40 15    Excluded 
+others_41 16    Excluded 
+others_42 15    Excluded 
+others_43 15    Excluded 
+others_44 31    Excluded 
+others_45 15    Excluded 
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+five_a  21    1        
+a5      26    1        
+all_one 17    1        
+zero    19    1        
+
+
+Group : enhanced_pkg::enhanced_scoreboard::protocol_cg
+
+===============================================================================
+Group : enhanced_pkg::enhanced_scoreboard::protocol_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/enhanced/enhanced_classes.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                      
+100.00 1      100    1        64           64            tb_top.me.obj.protocol_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   enhanced_pkg::enhanced_scoreboard::protocol_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 28       0         28      100.00  
+Crosses   8        0         8       100.00  
+
+
+Variables for Group  enhanced_pkg::enhanced_scoreboard::protocol_cg
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ordering_cp 3        0         3       100.00  100  1      1        0                    
+strobe_cp   16       0         16      100.00  100  1      1        0                    
+addr_cp     4        0         4       100.00  100  1      1        0                    
+rw_cp       2        0         2       100.00  100  1      1        0                    
+stall_cp    3        0         3       100.00  100  1      1        0                    
+
+
+Crosses for Group  enhanced_pkg::enhanced_scoreboard::protocol_cg
+
+
+CROSS      EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+address_rw 8        0         8       100.00  100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ordering_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 3        0         3       100.00  
+
+
+User Defined Bins for ordering_cp
+
+
+Excluded/Illegal bins
+
+NAME  COUNT STATUS   
+reads 0     Excluded 
+
+
+Covered bins
+
+NAME         COUNT AT LEAST 
+w_before_aw  2186  1        
+aw_before_w  2232  1        
+simultaneous 2458  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable strobe_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 16       0         16      100.00  
+
+
+User Defined Bins for strobe_cp
+
+
+Excluded/Illegal bins
+
+NAME  COUNT STATUS   
+reads 0     Excluded 
+
+
+Covered bins
+
+NAME       COUNT AT LEAST 
+partial_1  403   1        
+partial_2  384   1        
+partial_3  415   1        
+partial_4  410   1        
+partial_5  425   1        
+partial_6  393   1        
+partial_7  409   1        
+partial_8  399   1        
+partial_9  410   1        
+partial_10 447   1        
+partial_11 386   1        
+partial_12 374   1        
+partial_13 374   1        
+partial_14 368   1        
+full       869   1        
+zero       410   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable addr_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for addr_cp
+
+
+Bins
+
+NAME COUNT AT LEAST 
+sr   3661  1        
+rx   3309  1        
+tx   3504  1        
+cr   3571  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable rw_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for rw_cp
+
+
+Bins
+
+NAME  COUNT AT LEAST 
+read  7169  1        
+write 6876  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable stall_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 3        0         3       100.00  
+
+
+User Defined Bins for stall_cp
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+long_stall  6004  1        
+short_stall 5265  1        
+none        2776  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross address_rw
+
+
+Samples crossed: addr_cp rw_cp
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 8        0         8       100.00          
+
+
+Automatically Generated Cross Bins for address_rw
+
+
+Bins
+
+addr_cp rw_cp COUNT AT LEAST 
+sr      read  2014  1        
+sr      write 1647  1        
+rx      read  1762  1        
+rx      write 1547  1        
+tx      read  1717  1        
+tx      write 1787  1        
+cr      read  1676  1        
+cr      write 1895  1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : tb_top.me.obj.protocol_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                           
+100.00 100.00    1      100    1        1            64           64                    enhanced_pkg::enhanced_scoreboard::protocol_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   tb_top.me.obj.protocol_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 28       0         28      100.00  
+Crosses   8        0         8       100.00  
+
+
+Variables for Group Instance  tb_top.me.obj.protocol_cg
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ordering_cp 3        0         3       100.00  100  1      1        0                    
+strobe_cp   16       0         16      100.00  100  1      1        0                    
+addr_cp     4        0         4       100.00  100  1      1        0                    
+rw_cp       2        0         2       100.00  100  1      1        0                    
+stall_cp    3        0         3       100.00  100  1      1        0                    
+
+
+Crosses for Group Instance  tb_top.me.obj.protocol_cg
+
+
+CROSS      EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+address_rw 8        0         8       100.00  100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ordering_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 3        0         3       100.00  
+
+
+User Defined Bins for ordering_cp
+
+
+Excluded/Illegal bins
+
+NAME  COUNT STATUS   
+reads 0     Excluded 
+
+
+Covered bins
+
+NAME         COUNT AT LEAST 
+w_before_aw  2186  1        
+aw_before_w  2232  1        
+simultaneous 2458  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable strobe_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 16       0         16      100.00  
+
+
+User Defined Bins for strobe_cp
+
+
+Excluded/Illegal bins
+
+NAME  COUNT STATUS   
+reads 0     Excluded 
+
+
+Covered bins
+
+NAME       COUNT AT LEAST 
+partial_1  403   1        
+partial_2  384   1        
+partial_3  415   1        
+partial_4  410   1        
+partial_5  425   1        
+partial_6  393   1        
+partial_7  409   1        
+partial_8  399   1        
+partial_9  410   1        
+partial_10 447   1        
+partial_11 386   1        
+partial_12 374   1        
+partial_13 374   1        
+partial_14 368   1        
+full       869   1        
+zero       410   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable addr_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for addr_cp
+
+
+Bins
+
+NAME COUNT AT LEAST 
+sr   3661  1        
+rx   3309  1        
+tx   3504  1        
+cr   3571  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable rw_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for rw_cp
+
+
+Bins
+
+NAME  COUNT AT LEAST 
+read  7169  1        
+write 6876  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable stall_cp
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 3        0         3       100.00  
+
+
+User Defined Bins for stall_cp
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+long_stall  6004  1        
+short_stall 5265  1        
+none        2776  1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross address_rw
+
+
+Samples crossed: addr_cp rw_cp
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 8        0         8       100.00          
+
+
+Automatically Generated Cross Bins for address_rw
+
+
+Bins
+
+addr_cp rw_cp COUNT AT LEAST 
+sr      read  2014  1        
+sr      write 1647  1        
+rx      read  1762  1        
+rx      write 1547  1        
+tx      read  1717  1        
+tx      write 1787  1        
+cr      read  1676  1        
+cr      write 1895  1        
+
+

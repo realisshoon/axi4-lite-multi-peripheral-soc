@@ -1,0 +1,86 @@
+Command: /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/fixed_v2/simv +MODE=directed +N=0 +ntb_random_seed=1 +UVM_VERBOSITY=UVM_LOW -cm line+cond+fsm+tgl+branch+assert -cm_dir /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/fixed_v2/build.vdb -cm_name directed_s1 -l /home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/runs/directed_s1/simulation.log +WAVE
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Oct 19 20:53 2026
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test enhanced_test...
+UVM_INFO tb/enhanced/enhanced_classes.sv(243) @ 15940000: uvm_test_top [DRIVER] DRIVER_RESULT issued=175 completed=175
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 15940000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO tb/coverage.sv(107) @ 15940000: uvm_test_top.e.legacy_coverage [COV] 
+================================================
+ SPI AXI FUNCTIONAL COVERAGE
+ TOTAL              : 100.00 %
+ TXDATA             : 100.00 %
+ START_WRITE        : 100.00 %
+ DONE_STATUS        : 100.00 %
+ SPI_COMPLETE       : 100.00 %
+================================================
+UVM_INFO tb/enhanced/enhanced_classes.sv(132) @ 15940000: uvm_test_top.e.scb [SUMMARY] AXI_RESULT writes=85 reads=90 aw=85 w=85 b=85 ar=90 r=90 spi=5 aborted_spi=1 checks=594 passes=594 fails=0 pending=0 resets=2 protocol_cov=100.0000
+UVM_INFO tb/enhanced/enhanced_classes.sv(133) @ 15940000: uvm_test_top.e.scb [DIST] order[0]=39 stall[0]=94
+UVM_INFO tb/enhanced/enhanced_classes.sv(133) @ 15940000: uvm_test_top.e.scb [DIST] order[1]=24 stall[1]=57
+UVM_INFO tb/enhanced/enhanced_classes.sv(133) @ 15940000: uvm_test_top.e.scb [DIST] order[2]=22 stall[2]=24
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[0]=5
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[1]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[2]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[3]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[4]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[5]=5
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[6]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[7]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[8]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[9]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[10]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[11]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[12]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[13]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[14]=4
+UVM_INFO tb/enhanced/enhanced_classes.sv(134) @ 15940000: uvm_test_top.e.scb [DIST] strobe[15]=23
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 15940000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   25
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     1
+[DIST]    19
+[DRIVER]     1
+[RNTST]     1
+[SUMMARY]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+ASSERT_RESULT attempts=353 failures=0 b_stalls=196 r_stalls=67 aw_stalls=0 w_stalls=0 ar_stalls=90
+$finish at simulation time             15940000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 15940000 ps
+CPU Time:      0.200 seconds;       Data structure size:   0.6Mb
+Mon Oct 19 20:53:10 2026

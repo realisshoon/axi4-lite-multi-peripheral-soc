@@ -1,0 +1,26 @@
+Tests
+
+Total Coverage Summary 
+SCORE   LINE            COND          TOGGLE            FSM         BRANCH        ASSERT      GROUP        
+ 89.10  100.00 153/153   87.04 47/54   80.40 1042/1296   83.33 5/6   97.96 48/49   75.00 6/8  100.00 43/43 
+
+
+Total tests in report: 15
+-------------------------------------------------------------------------------
+Data from the following tests was used to generate this report
+runs/fixed_v5/build/final_v5_strobe_sideeffects_s1 
+runs/fixed_v5/build/final_v5_smoke_s1              
+runs/fixed_v5/build/final_v5_directed_s1           
+runs/fixed_v5/build/final_v5_small_s3              
+runs/fixed_v5/build/final_v5_intermediate_s4       
+runs/fixed_v5/build/final_v5_large_s11             
+runs/fixed_v5/build/final_v5_large_s12             
+runs/fixed_v5/build/final_v5_large_s13             
+runs/fixed_v5/build/final_v5_large_s14             
+runs/fixed_v5/build/final_v5_large_s15             
+runs/fixed_v5/build/final_v5_large_s16             
+runs/fixed_v5/build/final_v5_large_s17             
+runs/fixed_v5/build/final_v5_large_s18             
+runs/fixed_v5/build/final_v5_large_s19             
+runs/fixed_v5/build/final_v5_large_s20             
+

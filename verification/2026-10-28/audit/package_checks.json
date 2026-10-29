@@ -1,0 +1,8 @@
+{
+  "source_snapshots_verified": 21,
+  "canonical_logs": 15,
+  "credential_pattern_findings": [],
+  "simulation_executed": false,
+  "syntax_parse": "PASS",
+  "scan_limit": "Known credential patterns; not a proof of absence of all secrets"
+}

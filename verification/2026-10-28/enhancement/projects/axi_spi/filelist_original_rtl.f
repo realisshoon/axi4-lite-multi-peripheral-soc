@@ -1,0 +1,10 @@
++incdir+tb
++incdir+tb/enhanced
+baseline/rtl/spi_v1_0_S00_AXI.v
+baseline/rtl/spi_master.v
+baseline/rtl/spi_v1_0.v
+tb/enhanced/spi_pin_responder.sv
+tb/axi_lite_if.sv
+tb/spi_if.sv
+tb/enhanced/protocol_assertions.sv
+tb/enhanced/tb_top.sv

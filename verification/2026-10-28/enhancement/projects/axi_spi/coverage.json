@@ -1,0 +1,108 @@
+{
+  "project": "axi_spi",
+  "scope": "tb_top.dut: spi_v1_0 + spi_v1_0_S00_AXI + spi_master; TB responder excluded from code coverage",
+  "measured_date": "2026-10-19",
+  "report_test_count": 15,
+  "report_test_scope": "fixed_v5 canonical10seed regression plus smoke,directed,small,intermediate and masked-sideeffect targeted; not only canonicallarge",
+  "functional": {
+    "legacy": {
+      "bins_hit": 7,
+      "bins_total": 7,
+      "percent": 100,
+      "covergroups": [
+        "txdata_cg:4valid pattern bins; default others excluded",
+        "start_cg:1",
+        "done_cg:1",
+        "spi_complete_cg:1"
+      ],
+      "source": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/coverage.sv",
+      "sampling": "Accepted register write events; DONE forwarded only from completed read whose paired actual AR address is SR0xc and RDATA[1]==1. Separate address/expected-data queues clear together on reset. Legacy bin definitions unchanged."
+    },
+    "new": {
+      "bins_hit": 36,
+      "bins_total": 36,
+      "percent": 100,
+      "covergroup": "enhanced_scoreboard.protocol_cg",
+      "bins": {
+        "ordering_cp": 3,
+        "strobe_cp": 16,
+        "addr_cp": 4,
+        "rw_cp": 2,
+        "stall_cp": 3,
+        "address_rw": 8
+      },
+      "ignore_bins": "ordering/strobe=-1 for read responses; no illegal bins",
+      "sampling": "completed driver read/write operations; configured delayed ordering and strobe; accepted channel accounting independently checked",
+      "source": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/enhanced/enhanced_classes.sv"
+    },
+    "all_hit": 43,
+    "all_total": 43,
+    "report": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/grpinfo.txt"
+  },
+  "code": {
+    "score": 89.75,
+    "line": {
+      "percent": 100,
+      "hit": 153,
+      "total": 153
+    },
+    "condition": {
+      "percent": 87.04,
+      "hit": 47,
+      "total": 54
+    },
+    "toggle": {
+      "percent": 80.4,
+      "hit": 1042,
+      "total": 1296
+    },
+    "fsm": {
+      "percent": 83.33,
+      "hit": 5,
+      "total": 6
+    },
+    "branch": {
+      "percent": 97.96,
+      "hit": 48,
+      "total": 49
+    },
+    "report": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/hierarchy.txt",
+    "detail": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/modinfo.txt"
+  },
+  "native_assertions": {
+    "scope": "tb_top.assertions",
+    "properties": 5,
+    "hit_properties": 5,
+    "failures": 0,
+    "report": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/enhanced_final_v5/urg_report/asserts.txt",
+    "note": "native attempts include vacuity; Real Successes and console antecedent counters show nonvacuous execution; package RAL assertions not used,2zeroattempt excluded from claims"
+  },
+  "historical": {
+    "dut_score": 70.76,
+    "master_score": 86.94,
+    "axi_register_block_score": 66.46,
+    "line": 96.71,
+    "condition": 58.82,
+    "toggle": 44.34,
+    "fsm": 66.67,
+    "branch": 87.27,
+    "functional_hit": 7,
+    "functional_total": 7,
+    "report": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/reports/original_baseline/urg_report/hierarchy.txt",
+    "comparison_limit": "RTL buffers/WSTRB corrected; source/structural denominator changed. 152\u2192153line,68\u219254condition,1220\u21921296toggle,55\u219249branch. Do not present as identical-denominator coverage closure."
+  },
+  "remaining": {
+    "functional_model_unhit_bins": 0,
+    "unmodeled": "reset cases and busySTART separately checked but not functional bins; no PROT,unalignedaddress,all-divider or reset-cycle cross",
+    "condition": "7unhit combinations: early-ready B/R conditions are absent stimulus; several ARREADY&&!ARVALID and pending-capacity combinations require reachability proof",
+    "branch": "case default of exhaustive2-bit register word index; appears structurally unreachable but no formal proof/exclusion",
+    "fsm": "LOAD\u2192IDLE reset transition not targeted",
+    "toggle": "254unhit bin transitions, includes tied/unused highbits and reset-only fields; unclassified, no exclusion"
+  },
+  "collector_validation": {
+    "actual_sr_done_samples": 110,
+    "non_sr_bit1_rejected": 59,
+    "source": "/home/pedu36/workspace/UVM_ENHANCEMENT_20261019/projects/axi_spi/tb/enhanced/enhanced_classes.sv",
+    "logs": "runs/final_v5_large_s11..20/simulation.log COLLECTOR_RESULT"
+  }
+}
